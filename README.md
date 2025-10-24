@@ -6,16 +6,16 @@ A **minimal Karabiner-Elements config** that includes only the **Serenity (🕊�
 
 ## What’s inside
 
-- Spacebar: **tap = Space**, **hold = Fn** (Apple devices) 🕊️  
-- Fn + **J/K/L/;** → Arrow keys 🕊️  
-- Fn + **M/Comma/Period/Slash** → **Home / PgDn / PgUp / End** 🕊️  
-- Fn + **Q–P** → **1–0** 🕊️  
-- **Caps ↔ Esc** swap 🕊️  
-- **Right Shift**: hold = Shift, tap = Enter 🕊️  
-- Fn + **Z/X/C/V/B** → **Undo/Cut/Copy/Paste/Redo** 🕊️  
-- Fn + **A/S/D/F** → **Ctrl/Option/Command/Shift** (with Fn) 🕊️  
-- Fn + **number row** → **F1–F12** 🕊️  
-- Plus a focused **Serenity layout** remap block 🕊️
+- Spacebar: **tap = Space**, **hold = Fn** (Apple devices)  
+- Fn + **J/K/L/;** → Arrow keys
+- Fn + **M/Comma/Period/Slash** → **Home / PgDn / PgUp / End**
+- Fn + **Q–P** → **1–0**
+- **Caps ↔ Esc** swap  
+- **Right Shift**: hold = Shift, tap = Enter
+- Fn + **Z/X/C/V/B** → **Undo/Cut/Copy/Paste/Redo**
+- Fn + **A/S/D/F** → **Ctrl/Option/Command/Shift** (with Fn)
+- Fn + **number row** → **F1–F12**
+- Plus a focused **Serenity layout** remap block
 
 > All rules are filtered by descriptions containing the dove emoji (🕊️).
 
