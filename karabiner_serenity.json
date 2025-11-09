@@ -4,7 +4,7 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Toggle virtual Fn hold using Fn+G (disable with Fn+Capslock) on Apple Devices 🕊️",
+            "description": "Toggle virtual Fn hold using Fn+g (disable with Fn+Capslock) on Apple Devices 🕊️",
             "manipulators": [
               {
                 "type": "basic",
