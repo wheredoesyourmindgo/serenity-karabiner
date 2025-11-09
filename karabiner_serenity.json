@@ -4,6 +4,139 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Toggle virtual Fn hold using Fn+G (disable with Fn+Capslock) on Apple Devices 🕊️",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "fn_toggle_on",
+                      "value": 1
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "fn_toggle_on",
+                      "value": 0
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "fn_toggle_on",
+                      "value": 0
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Map Spacebar hold to Fn on Apple Devices 🕊️",
             "manipulators": [
               {
@@ -56,8 +189,8 @@
                   }
                 ],
                 "parameters": {
-                  "basic.to_if_alone_timeout_milliseconds": 200,
-                  "basic.to_if_held_down_threshold_milliseconds": 200
+                  "basic.to_if_alone_timeout_milliseconds": 190,
+                  "basic.to_if_held_down_threshold_milliseconds": 190
                 }
               }
             ]
@@ -66,22 +199,7 @@
             "description": "Map Fn+Spacebar to Spacebar on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "spacebar",
                   "modifiers": {
@@ -98,7 +216,54 @@
                     "key_code": "spacebar"
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar"
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -231,22 +396,7 @@
             "description": "Map Fn+A to Fn+Left Control on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "a",
                   "modifiers": {
@@ -266,7 +416,57 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "a"
+                },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "modifiers": [
+                      "fn"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -274,22 +474,7 @@
             "description": "Map Fn+S to Fn+Left Option on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "s",
                   "modifiers": {
@@ -309,7 +494,57 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s"
+                },
+                "to": [
+                  {
+                    "key_code": "left_option",
+                    "modifiers": [
+                      "fn"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -317,22 +552,7 @@
             "description": "Map Fn+D to Fn+Left Command on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "d",
                   "modifiers": {
@@ -352,7 +572,57 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d"
+                },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "modifiers": [
+                      "fn"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -360,22 +630,7 @@
             "description": "Map Fn+F to Fn+Left Shift on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "f",
                   "modifiers": {
@@ -395,7 +650,57 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "fn"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -403,27 +708,15 @@
             "description": "Map Fn+Z to Command+Z (undo) on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "z",
                   "modifiers": {
                     "mandatory": [
                       "fn"
+                    ],
+                    "optional": [
+                      "any"
                     ]
                   }
                 },
@@ -435,37 +728,27 @@
                     ]
                   }
                 ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map Fn+x to Command+x (cut) on Apple Devices 🕊️",
-            "manipulators": [
-              {
                 "conditions": [
                   {
-                    "name": "is_lock_screen",
                     "type": "variable_if",
+                    "name": "is_lock_screen",
                     "value": 0
                   },
                   {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "x",
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
                     ]
                   }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "z"
                 },
                 "to": [
                   {
@@ -475,7 +758,105 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Map Fn+X to Command+X (cut) on Apple Devices 🕊️",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "x",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "x",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "x"
+                },
+                "to": [
+                  {
+                    "key_code": "x",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -483,27 +864,15 @@
             "description": "Map Fn+C to Command+C (copy) on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "c",
                   "modifiers": {
                     "mandatory": [
                       "fn"
+                    ],
+                    "optional": [
+                      "any"
                     ]
                   }
                 },
@@ -515,7 +884,57 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "key_code": "c",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -523,27 +942,15 @@
             "description": "Map Fn+V to Command+V (paste) on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "v",
                   "modifiers": {
                     "mandatory": [
                       "fn"
+                    ],
+                    "optional": [
+                      "any"
                     ]
                   }
                 },
@@ -555,35 +962,73 @@
                     ]
                   }
                 ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map Fn+b to Shift+Command+b (redo) on Apple Devices 🕊️",
-            "manipulators": [
-              {
                 "conditions": [
                   {
-                    "name": "is_lock_screen",
                     "type": "variable_if",
+                    "name": "is_lock_screen",
                     "value": 0
                   },
                   {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "v"
+                },
+                "to": [
+                  {
+                    "key_code": "v",
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Map Fn+B to Shift+Command+B (redo) on Apple Devices 🕊️",
+            "manipulators": [
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "b",
                   "modifiers": {
                     "mandatory": [
                       "fn"
+                    ],
+                    "optional": [
+                      "any"
                     ]
                   }
                 },
@@ -596,7 +1041,58 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b"
+                },
+                "to": [
+                  {
+                    "key_code": "z",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -604,22 +1100,7 @@
             "description": "Map Fn+J/K/L/; to Arrow Keys on Apple Devices (Fn required, other modifiers optional) 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "j",
                   "modifiers": {
@@ -636,20 +1117,57 @@
                     "key_code": "left_arrow"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j"
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "k",
                   "modifiers": {
@@ -666,20 +1184,57 @@
                     "key_code": "down_arrow"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k"
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "l",
                   "modifiers": {
@@ -696,20 +1251,57 @@
                     "key_code": "up_arrow"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l"
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "semicolon",
                   "modifiers": {
@@ -726,7 +1318,54 @@
                     "key_code": "right_arrow"
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "semicolon"
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -734,22 +1373,7 @@
             "description": "Map Fn+M, Fn+Comma, Fn+Period, Fn+Slash to Home, Page Down, Page Up, End on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "m",
                   "modifiers": {
@@ -766,20 +1390,57 @@
                     "key_code": "home"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m"
+                },
+                "to": [
+                  {
+                    "key_code": "home"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "comma",
                   "modifiers": {
@@ -796,20 +1457,57 @@
                     "key_code": "page_down"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "comma"
+                },
+                "to": [
+                  {
+                    "key_code": "page_down"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "period",
                   "modifiers": {
@@ -826,20 +1524,57 @@
                     "key_code": "page_up"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "period"
+                },
+                "to": [
+                  {
+                    "key_code": "page_up"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "slash",
                   "modifiers": {
@@ -856,7 +1591,54 @@
                     "key_code": "end"
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "slash"
+                },
+                "to": [
+                  {
+                    "key_code": "end"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -864,22 +1646,7 @@
             "description": "Map Fn+QWERTYUIOP to 1-0 on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "q",
                   "modifiers": {
@@ -896,20 +1663,57 @@
                     "key_code": "1"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "q"
+                },
+                "to": [
+                  {
+                    "key_code": "1"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "w",
                   "modifiers": {
@@ -926,20 +1730,57 @@
                     "key_code": "2"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w"
+                },
+                "to": [
+                  {
+                    "key_code": "2"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "e",
                   "modifiers": {
@@ -956,20 +1797,57 @@
                     "key_code": "3"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "e"
+                },
+                "to": [
+                  {
+                    "key_code": "3"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "r",
                   "modifiers": {
@@ -986,20 +1864,57 @@
                     "key_code": "4"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r"
+                },
+                "to": [
+                  {
+                    "key_code": "4"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "t",
                   "modifiers": {
@@ -1016,20 +1931,57 @@
                     "key_code": "5"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t"
+                },
+                "to": [
+                  {
+                    "key_code": "5"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "y",
                   "modifiers": {
@@ -1046,20 +1998,57 @@
                     "key_code": "6"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "y"
+                },
+                "to": [
+                  {
+                    "key_code": "6"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "u",
                   "modifiers": {
@@ -1076,20 +2065,57 @@
                     "key_code": "7"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "u"
+                },
+                "to": [
+                  {
+                    "key_code": "7"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "i",
                   "modifiers": {
@@ -1106,20 +2132,57 @@
                     "key_code": "8"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "i"
+                },
+                "to": [
+                  {
+                    "key_code": "8"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "o",
                   "modifiers": {
@@ -1136,20 +2199,57 @@
                     "key_code": "9"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "o"
+                },
+                "to": [
+                  {
+                    "key_code": "9"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "p",
                   "modifiers": {
@@ -1166,7 +2266,54 @@
                     "key_code": "0"
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "p"
+                },
+                "to": [
+                  {
+                    "key_code": "0"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -1174,22 +2321,7 @@
             "description": "Map Fn+Misc keycodes on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "n",
                   "modifiers": {
@@ -1210,25 +2342,61 @@
                     "key_code": "vk_none"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
-                    "name": "is_lock_screen",
                     "type": "variable_if",
+                    "name": "is_lock_screen",
                     "value": 0
                   },
                   {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "n"
+                },
+                "to": [
+                  {
+                    "hold_down_milliseconds": 100,
+                    "key_code": "caps_lock"
+                  },
+                  {
+                    "key_code": "vk_none"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "delete_or_backspace",
                   "modifiers": {
@@ -1247,25 +2415,57 @@
                     "key_code": "delete_or_backspace"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
-                    "name": "is_lock_screen",
                     "type": "variable_if",
+                    "name": "is_lock_screen",
                     "value": 0
                   },
                   {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
-                    ],
-                    "type": "device_if"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace"
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "delete_or_backspace",
                   "modifiers": {
@@ -1284,25 +2484,66 @@
                     "key_code": "delete_forward"
                   }
                 ],
-                "type": "basic"
-              },
-              {
                 "conditions": [
                   {
-                    "name": "is_lock_screen",
                     "type": "variable_if",
+                    "name": "is_lock_screen",
                     "value": 0
                   },
                   {
+                    "type": "device_if",
                     "identifiers": [
                       {
                         "description": "All Apple Devices",
                         "vendor_id": 1452
                       }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
                     ],
-                    "type": "device_if"
+                    "optional": [
+                      "control",
+                      "option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward"
                   }
                 ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
                 "from": {
                   "key_code": "delete_or_backspace",
                   "modifiers": {
@@ -1325,7 +2566,67 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift",
+                      "command"
+                    ],
+                    "optional": [
+                      "control",
+                      "option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "k",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -1333,22 +2634,7 @@
             "description": "Map Fn+H to a Word/Line Select on Apple Devices 🕊️",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "name": "is_lock_screen",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "identifiers": [
-                      {
-                        "description": "All Apple Devices",
-                        "vendor_id": 1452
-                      }
-                    ],
-                    "type": "device_if"
-                  }
-                ],
+                "type": "basic",
                 "from": {
                   "key_code": "h",
                   "modifiers": {
@@ -1396,7 +2682,85 @@
                     ]
                   }
                 ],
-                "type": "basic"
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h"
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  },
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  },
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "right_arrow"
+                  },
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  },
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_toggle_on",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "is_lock_screen",
+                    "value": 0
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "description": "All Apple Devices",
+                        "vendor_id": 1452
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
