@@ -1,0 +1,13 @@
+{
+  "name": "serenity-karabiner",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node build.ts",
+    "check": "node build.ts --check",
+    "lint": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --lint-complex-modifications serenity.json"
+  }
+}

@@ -1,70 +1,63 @@
-
-
 # serenity-karabiner
 
-A **minimal Karabiner-Elements config** that includes only the **Serenity (🕊️)** rules—clean, portable, and easy to merge with your setup.
+The [Serenity](https://www.serenity-layout.fyi/software) layout for any Mac keyboard, laptop included, as a [Karabiner-Elements](https://karabiner-elements.pqrs.org) rules file.
 
-## What’s inside
+## Install
 
-- Spacebar: **tap = Space**, **hold = Fn** (Apple devices)  
-- Fn + **J/K/L/;** → Arrow keys
-- Fn + **M/Comma/Period/Slash** → **Home / PgDn / PgUp / End**
-- Fn + **Q–P** → **1–0**
-- **Caps ↔ Esc** swap  
-- **Right Shift**: hold = Shift, tap = Enter
-- Fn + **Z/X/C/V/B** → **Undo/Cut/Copy/Paste/Redo**
-- Fn + **A/S/D/F** → **Ctrl/Option/Command/Shift** (with Fn)
-- Fn + **number row** → **F1–F12**
-- Plus a focused **Serenity layout** remap block
+With Karabiner-Elements installed, open this link:
 
-> All rules are filtered by descriptions containing the dove emoji (🕊️).
+**[Import Serenity into Karabiner-Elements](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwheredoesyourmindgo%2Fserenity-karabiner%2Fmain%2Fserenity.json)**
 
-## Quick start
+(GitHub doesn't make `karabiner://` links clickable. Use the button at [serenity-layout.fyi/software](https://www.serenity-layout.fyi/software), or paste the link into Safari.)
 
-### Option A — Use this repo’s JSON directly
-1. Copy `karabiner_serenity.json` to:
-   ```bash
-   ~/.config/karabiner/karabiner_serenity.json
-   ```
-2. In Karabiner-Elements → **Complex Modifications** → **Add rule** → **Import from file** and load it.  
-3. Enable the rules you want.
+Karabiner asks to import the rules. Click **Import**, then **Enable All** next to **Serenity 🕊️**.
 
-### Option B — Extract only 🕊️ rules from your current config
-If you already have a large `karabiner.json` and want a clean Serenity-only file:
+Or by hand:
 
-```bash
-# Single profile
-jq '{profiles: [{complex_modifications: {rules: [.profiles[0].complex_modifications.rules[] | select(.description | contains("🕊️"))]}}]}' \
-~/.config/karabiner/karabiner.json \
-> ~/.config/karabiner/karabiner_serenity.json
+```sh
+curl -fsSL --create-dirs -o ~/.config/karabiner/assets/complex_modifications/serenity.json \
+  https://raw.githubusercontent.com/wheredoesyourmindgo/serenity-karabiner/main/serenity.json
 ```
 
-```bash
-# All profiles (keeps a Serenity-only ruleset per profile)
-jq '{profiles: [.profiles[] | {complex_modifications: {rules: [.complex_modifications.rules[] | select(.description | contains("🕊️"))]}}]}' \
-~/.config/karabiner/karabiner.json \
-> ~/.config/karabiner/karabiner_serenity.json
+Then go to Karabiner-Elements → **Complex Modifications** → **Add predefined rule** → **Serenity 🕊️** → **Enable All**.
+
+**Rule order matters.** Karabiner gives rules higher in the list priority, and the Fn layer has to come before **Map Serenity layout**. **Enable All** keeps the order right. If you enable rules one at a time, keep **Map Serenity layout** at the bottom.
+
+The rules leave your other Karabiner settings, devices and rules alone.
+
+## What's inside
+
+All rules apply only to Apple keyboards (vendor ID `1452`).
+
+- **Map Serenity layout:** the Serenity letters and punctuation on the alpha keys
+- **Spacebar:** tap for Space, hold for Fn
+- **Fn+G** latches the Fn layer on; **G** or **Caps Lock** releases it
+- **Fn+A/S/D/F:** Control / Option / Command / Shift
+- **Fn+Z/X/C/V/B:** Undo / Cut / Copy / Paste / Redo
+- **Fn+J/K/L/;:** arrow keys
+- **Fn+M/Comma/Period/Slash:** Home / Page Down / Page Up / End
+- **Fn+Q–P:** 1–0
+- **Fn+H:** select word (hold to select line)
+- **Fn+N:** Caps Lock
+- **Fn + number row:** F1–F12
+- **Caps Lock ↔ Escape** swap
+- **Right Shift:** tap for Enter, hold for Shift
+
+### Lock screen
+
+Most rules turn off while the screen is locked, so you can type your password in QWERTY. Karabiner can't tell when the screen is locked by itself. The [Hammerspoon snippet](https://www.serenity-layout.fyi/extras) sets the `is_lock_screen` variable for it. Without the snippet, the rules work but stay on at the lock screen too.
+
+## Development
+
+`serenity.json` is generated. Edit [`build.ts`](build.ts), then:
+
+```sh
+npm run build   # regenerate serenity.json (Node 24+, no dependencies)
+npm run lint    # validate with Karabiner's own linter (needs Karabiner-Elements installed)
 ```
 
-Then import `karabiner_serenity.json` in Karabiner-Elements.
-
-## Why “partial” config?
-
-This file intentionally includes **only** Serenity rules so it won’t overwrite your other Karabiner settings (devices, parameters, other rules). Use it as a **snippet** you can import or merge.
-
-## Tips
-
-- Need to **preserve devices/parameters** too? Build a richer output with `jq` by copying those keys from your base config alongside the filtered rules.
-- After changes:
-  ```bash
-  karabiner_cli --reloadxml
-  ```
-
-## Compatibility
-
-- macOS with Karabiner-Elements (latest)  
-- Fn mappings and some conditions target **Apple keyboards** (vendor_id `1452`)
+Commit both files. CI runs `npm run check`, which fails if `serenity.json` doesn't match `build.ts`. The install link reads `serenity.json` from `main`, so a push goes straight to users.
 
 ## License
 
-MIT—use freely.
+MIT
