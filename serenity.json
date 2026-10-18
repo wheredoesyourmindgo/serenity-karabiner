@@ -2,7 +2,7 @@
   "title": "Serenity 🕊️",
   "rules": [
     {
-      "description": "Latch the Fn layer with Fn+G (release with G or Caps Lock) on Apple Devices 🕊️",
+      "description": "Serenity: Fn+G latches the Fn layer (G or Caps Lock releases it)",
       "manipulators": [
         {
           "type": "basic",
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "description": "Spacebar: tap for Space, hold for Fn on Apple Devices 🕊️",
+      "description": "Serenity: Spacebar → Space on tap, Fn on hold",
       "manipulators": [
         {
           "type": "basic",
@@ -189,7 +189,7 @@
       ]
     },
     {
-      "description": "Map Fn+Spacebar to Spacebar on Apple Devices 🕊️",
+      "description": "Serenity: Fn+Spacebar → Space",
       "manipulators": [
         {
           "type": "basic",
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "description": "Right Shift: tap for Enter, hold for Shift 🕊️",
+      "description": "Serenity: Right Shift → Enter on tap, Shift on hold",
       "manipulators": [
         {
           "type": "basic",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "description": "Swap Caps Lock and Escape 🕊️",
+      "description": "Serenity: Caps Lock ↔ Escape",
       "manipulators": [
         {
           "type": "basic",
@@ -386,7 +386,7 @@
       ]
     },
     {
-      "description": "Map Fn+A/S/D/F to Control/Option/Command/Shift on Apple Devices 🕊️",
+      "description": "Serenity: Fn+A/S/D/F → Control/Option/Command/Shift",
       "manipulators": [
         {
           "type": "basic",
@@ -683,7 +683,7 @@
       ]
     },
     {
-      "description": "Map Fn+Z/X/C/V/B to Undo/Cut/Copy/Paste/Redo on Apple Devices 🕊️",
+      "description": "Serenity: Fn+Z/X/C/V/B → Undo/Cut/Copy/Paste/Redo",
       "manipulators": [
         {
           "type": "basic",
@@ -1055,7 +1055,7 @@
       ]
     },
     {
-      "description": "Map Fn+J/K/L/; to Arrow Keys on Apple Devices 🕊️",
+      "description": "Serenity: Fn+J/K/L/; → Arrow Keys",
       "manipulators": [
         {
           "type": "basic",
@@ -1328,7 +1328,7 @@
       ]
     },
     {
-      "description": "Map Fn+M/Comma/Period/Slash to Home/Page Down/Page Up/End on Apple Devices 🕊️",
+      "description": "Serenity: Fn+M/Comma/Period/Slash → Home/Page Down/Page Up/End",
       "manipulators": [
         {
           "type": "basic",
@@ -1601,7 +1601,7 @@
       ]
     },
     {
-      "description": "Map Fn+Q–P to 1–0 on Apple Devices 🕊️",
+      "description": "Serenity: Fn+Q–P → 1–0",
       "manipulators": [
         {
           "type": "basic",
@@ -2276,7 +2276,7 @@
       ]
     },
     {
-      "description": "Map Fn+N to Caps Lock, and Delete keys under Fn, on Apple Devices 🕊️",
+      "description": "Serenity: Fn+N → Caps Lock, Fn+Delete → Delete",
       "manipulators": [
         {
           "type": "basic",
@@ -2589,7 +2589,7 @@
       ]
     },
     {
-      "description": "Map Fn+H to Select Word (hold for Select Line) on Apple Devices 🕊️",
+      "description": "Serenity: Fn+H → Select Word (hold for Select Line)",
       "manipulators": [
         {
           "type": "basic",
@@ -2723,7 +2723,7 @@
       ]
     },
     {
-      "description": "Map Fn+Number Row to F1–F12 on Apple Devices 🕊️",
+      "description": "Serenity: Fn+Number Row → F1–F12",
       "manipulators": [
         {
           "type": "basic",
@@ -3088,7 +3088,7 @@
       ]
     },
     {
-      "description": "Map Serenity layout 🕊️",
+      "description": "Serenity: Layout",
       "manipulators": [
         {
           "type": "basic",

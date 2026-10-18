@@ -56,7 +56,7 @@ const setFnLatch = (value: number): ToEvent => ({set_variable: {name: 'fn_toggle
 const capsLock: ToEvent[] = [{hold_down_milliseconds: 100, key_code: 'caps_lock'}, {key_code: 'vk_none'}]
 
 const rule = (description: string, manipulators: Manipulator[]): Rule => ({
-  description: `${description} 🕊️`,
+  description: `Serenity: ${description}`,
   manipulators
 })
 
@@ -109,7 +109,7 @@ const serenityLayout: Record<KeyCode, KeyCode>[] = [
 // --- Rules --------------------------------------------------------------------
 
 const rules: Rule[] = [
-  rule('Latch the Fn layer with Fn+G (release with G or Caps Lock) on Apple Devices', [
+  rule('Fn+G latches the Fn layer (G or Caps Lock releases it)', [
     {
       type: 'basic',
       from: {key_code: 'g', modifiers: {mandatory: ['fn'], optional: ['any']}},
@@ -130,7 +130,7 @@ const rules: Rule[] = [
     }
   ]),
 
-  rule('Spacebar: tap for Space, hold for Fn on Apple Devices', [
+  rule('Spacebar → Space on tap, Fn on hold', [
     remap(
       'spacebar',
       {
@@ -146,9 +146,9 @@ const rules: Rule[] = [
     )
   ]),
 
-  rule('Map Fn+Spacebar to Spacebar on Apple Devices', fnLayer('spacebar', [key('spacebar')])),
+  rule('Fn+Spacebar → Space', fnLayer('spacebar', [key('spacebar')])),
 
-  rule('Right Shift: tap for Enter, hold for Shift', [
+  rule('Right Shift → Enter on tap, Shift on hold', [
     remap('right_shift', {
       to: [key('right_shift')],
       to_after_key_up: [key('right_shift')],
@@ -157,13 +157,13 @@ const rules: Rule[] = [
     })
   ]),
 
-  rule('Swap Caps Lock and Escape', [
+  rule('Caps Lock ↔ Escape', [
     remap('caps_lock', {to: [key('escape')]}),
     remap('escape', {to: capsLock})
   ]),
 
   rule(
-    'Map Fn+A/S/D/F to Control/Option/Command/Shift on Apple Devices',
+    'Fn+A/S/D/F → Control/Option/Command/Shift',
     fnLayerMap([
       ['a', key('left_control', 'fn')],
       ['s', key('left_option', 'fn')],
@@ -173,7 +173,7 @@ const rules: Rule[] = [
   ),
 
   rule(
-    'Map Fn+Z/X/C/V/B to Undo/Cut/Copy/Paste/Redo on Apple Devices',
+    'Fn+Z/X/C/V/B → Undo/Cut/Copy/Paste/Redo',
     fnLayerMap([
       ['z', key('z', 'left_command')],
       ['x', key('x', 'left_command')],
@@ -184,7 +184,7 @@ const rules: Rule[] = [
   ),
 
   rule(
-    'Map Fn+J/K/L/; to Arrow Keys on Apple Devices',
+    'Fn+J/K/L/; → Arrow Keys',
     fnLayerMap([
       ['j', key('left_arrow')],
       ['k', key('down_arrow')],
@@ -194,7 +194,7 @@ const rules: Rule[] = [
   ),
 
   rule(
-    'Map Fn+M/Comma/Period/Slash to Home/Page Down/Page Up/End on Apple Devices',
+    'Fn+M/Comma/Period/Slash → Home/Page Down/Page Up/End',
     fnLayerMap([
       ['m', key('home')],
       ['comma', key('page_down')],
@@ -204,11 +204,11 @@ const rules: Rule[] = [
   ),
 
   rule(
-    'Map Fn+Q–P to 1–0 on Apple Devices',
+    'Fn+Q–P → 1–0',
     fnLayerMap(['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'].map((from, i) => [from, key(String((i + 1) % 10))]))
   ),
 
-  rule('Map Fn+N to Caps Lock, and Delete keys under Fn, on Apple Devices', [
+  rule('Fn+N → Caps Lock, Fn+Delete → Delete', [
     ...fnLayer('n', capsLock),
     ...fnLayer('delete_or_backspace', [key('delete_or_backspace')], {optional: ['control', 'command', 'option']}),
     ...fnLayer('delete_or_backspace', [key('delete_forward')], {mandatory: ['shift'], optional: ['control', 'option']}),
@@ -219,7 +219,7 @@ const rules: Rule[] = [
   ]),
 
   rule(
-    'Map Fn+H to Select Word (hold for Select Line) on Apple Devices',
+    'Fn+H → Select Word (hold for Select Line)',
     fnLayer('h', [key('right_arrow'), key('left_arrow', 'left_option'), key('right_arrow', 'left_option', 'left_shift')], {
       to_if_held_down: [
         key('right_arrow'),
@@ -231,7 +231,7 @@ const rules: Rule[] = [
 
   // No lock-screen condition, so these also work on the lock screen.
   rule(
-    'Map Fn+Number Row to F1–F12 on Apple Devices',
+    'Fn+Number Row → F1–F12',
     ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'hyphen', 'equal_sign'].map((from, i) => ({
       type: 'basic' as const,
       from: {key_code: from, modifiers: {mandatory: ['fn'], optional: ['any']}},
@@ -240,7 +240,7 @@ const rules: Rule[] = [
     }))
   ),
 
-  rule('Map Serenity layout', [
+  rule('Layout', [
     remap('delete_or_backspace', {to: [key('delete_forward')]}, {mandatory: ['shift'], optional: ['control', 'option']}),
     remap(
       'delete_or_backspace',

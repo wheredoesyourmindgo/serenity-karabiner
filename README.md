@@ -21,15 +21,15 @@ curl -fsSL --create-dirs -o ~/.config/karabiner/assets/complex_modifications/ser
 
 Then go to Karabiner-Elements → **Complex Modifications** → **Add predefined rule** → **Serenity 🕊️** → **Enable All**.
 
-**Rule order matters.** Karabiner gives rules higher in the list priority, and the Fn layer has to come before **Map Serenity layout**. **Enable All** keeps the order right. If you enable rules one at a time, keep **Map Serenity layout** at the bottom.
+**Rule order matters.** Karabiner gives rules higher in the list priority, and the Fn layer has to come before **Serenity: Layout**. **Enable All** keeps the order right. If you enable rules one at a time, keep **Serenity: Layout** at the bottom.
 
-The rules leave your other Karabiner settings, devices and rules alone.
+Every rule's name starts with **Serenity:**, so you can tell them apart from your own. To update, remove the Serenity rules and import again. The rules leave your other Karabiner settings, devices and rules alone.
 
 ## What's inside
 
 All rules apply only to Apple keyboards (vendor ID `1452`).
 
-- **Map Serenity layout:** the Serenity letters and punctuation on the alpha keys
+- **Layout:** the Serenity letters and punctuation on the alpha keys
 - **Spacebar:** tap for Space, hold for Fn
 - **Fn+G** latches the Fn layer on; **G** or **Caps Lock** releases it
 - **Fn+A/S/D/F:** Control / Option / Command / Shift
