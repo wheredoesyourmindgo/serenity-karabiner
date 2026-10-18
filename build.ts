@@ -253,7 +253,7 @@ const rules: Rule[] = [
 
 // --- Output -------------------------------------------------------------------
 
-const json = JSON.stringify({title: 'Serenity 🕊️', rules}, null, 2) + '\n'
+const json = JSON.stringify({title: 'Serenity', rules}, null, 2) + '\n'
 
 if (process.argv.includes('--check')) {
   let current = ''

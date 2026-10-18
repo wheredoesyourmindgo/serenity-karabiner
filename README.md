@@ -10,7 +10,7 @@ With Karabiner-Elements installed, open this link:
 
 (GitHub doesn't make `karabiner://` links clickable. Use the button at [serenity-layout.fyi/software](https://www.serenity-layout.fyi/software), or paste the link into Safari.)
 
-Karabiner asks to import the rules. Click **Import**, then **Enable All** next to **Serenity 🕊️**.
+Karabiner asks to import the rules. Click **Import**, then **Enable All** next to **Serenity**.
 
 Or by hand:
 
@@ -19,7 +19,7 @@ curl -fsSL --create-dirs -o ~/.config/karabiner/assets/complex_modifications/ser
   https://raw.githubusercontent.com/wheredoesyourmindgo/serenity-karabiner/main/serenity.json
 ```
 
-Then go to Karabiner-Elements → **Complex Modifications** → **Add predefined rule** → **Serenity 🕊️** → **Enable All**.
+Then go to Karabiner-Elements → **Complex Modifications** → **Add predefined rule** → **Serenity** → **Enable All**.
 
 **Rule order matters.** Karabiner gives rules higher in the list priority, and the Fn layer has to come before **Serenity: Layout**. **Enable All** keeps the order right. If you enable rules one at a time, keep **Serenity: Layout** at the bottom.
 
