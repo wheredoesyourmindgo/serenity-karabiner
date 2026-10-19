@@ -19,7 +19,7 @@ type ToEvent =
   | {sticky_modifier: Record<Modifier, 'on' | 'off' | 'toggle'>}
 type Condition =
   | {type: 'variable_if'; name: string; value: number}
-  | {type: 'device_if'; identifiers: {description: string; vendor_id: number}[]}
+  | {type: 'device_if'; identifiers: {description: string; vendor_id?: number; is_built_in_keyboard?: boolean}[]}
 type FromModifiers = {mandatory?: Modifier[]; optional?: Modifier[]}
 type Manipulator = {
   type: 'basic'
@@ -38,9 +38,15 @@ const OUTPUT = new URL('./serenity.json', import.meta.url)
 
 // --- Conditions ---------------------------------------------------------------
 
+// Apple keyboards only, so QMK and other third-party boards (which report their own vendor IDs)
+// pass through untouched. Apple is 1452 over USB and built in, but 76 over Bluetooth.
 const appleKeyboards: Condition = {
   type: 'device_if',
-  identifiers: [{description: 'All Apple Devices', vendor_id: 1452}]
+  identifiers: [
+    {description: 'Apple keyboards over USB and built in', vendor_id: 1452},
+    {description: 'Apple keyboards over Bluetooth', vendor_id: 76},
+    {description: 'Any built-in keyboard', is_built_in_keyboard: true}
+  ]
 }
 // Set by the Hammerspoon snippet at serenity-layout.fyi/extras, so typing a
 // password on the lock screen isn't remapped. Unset reads as 0.

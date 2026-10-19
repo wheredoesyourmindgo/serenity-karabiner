@@ -38,7 +38,7 @@ Every rule's name starts with **Serenity:**, so you can tell them apart from you
 
 ## What's inside
 
-All rules apply only to Apple keyboards (vendor ID `1452`).
+All rules apply only to Apple keyboards: built in, over USB (vendor ID `1452`) or over Bluetooth (vendor ID `76`). QMK and other keyboards pass through untouched.
 
 - **Layout:** the Serenity letters and punctuation on the alpha keys
 - **Spacebar:** tap for Space, hold for Fn

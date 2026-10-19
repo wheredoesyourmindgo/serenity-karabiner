@@ -40,8 +40,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -80,8 +88,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -120,8 +136,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -179,8 +203,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -219,8 +251,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -251,8 +291,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -303,8 +351,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -340,8 +396,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -376,8 +440,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -465,8 +537,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -546,8 +626,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -630,8 +718,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -711,8 +807,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -795,8 +899,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -876,8 +988,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -960,8 +1080,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1041,8 +1169,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1084,8 +1220,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1119,8 +1263,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1157,8 +1309,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1192,8 +1352,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1230,8 +1398,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1265,8 +1441,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1303,8 +1487,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1338,8 +1530,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1377,8 +1577,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1413,8 +1621,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1453,8 +1669,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1485,8 +1709,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1520,8 +1752,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1552,8 +1792,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1587,8 +1835,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1619,8 +1875,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1654,8 +1918,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1686,8 +1958,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1726,8 +2006,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1758,8 +2046,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1793,8 +2089,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1825,8 +2129,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1860,8 +2172,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1892,8 +2212,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1927,8 +2255,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1959,8 +2295,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -1999,8 +2343,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2031,8 +2383,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2066,8 +2426,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2098,8 +2466,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2133,8 +2509,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2165,8 +2549,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2200,8 +2592,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2232,8 +2632,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2267,8 +2675,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2299,8 +2715,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2334,8 +2758,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2366,8 +2798,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2401,8 +2841,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2433,8 +2881,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2468,8 +2924,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2500,8 +2964,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2535,8 +3007,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2567,8 +3047,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2602,8 +3090,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2634,8 +3130,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2678,8 +3182,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2714,8 +3226,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2751,8 +3271,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2783,8 +3311,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2820,8 +3356,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2861,8 +3405,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2902,8 +3454,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -2947,8 +3507,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3018,8 +3586,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3081,8 +3657,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3121,8 +3705,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3153,8 +3745,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3188,8 +3788,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3220,8 +3828,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3255,8 +3871,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3287,8 +3911,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3322,8 +3954,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3354,8 +3994,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3389,8 +4037,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3421,8 +4077,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3456,8 +4120,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3488,8 +4160,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3523,8 +4203,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3555,8 +4243,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3590,8 +4286,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3622,8 +4326,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3657,8 +4369,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3689,8 +4409,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3724,8 +4452,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3756,8 +4492,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3791,8 +4535,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3823,8 +4575,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3858,8 +4618,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3890,8 +4658,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3931,8 +4707,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -3971,8 +4755,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4003,8 +4795,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4035,8 +4835,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4067,8 +4875,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4099,8 +4915,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4131,8 +4955,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4163,8 +4995,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4195,8 +5035,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4227,8 +5075,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4259,8 +5115,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4291,8 +5155,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4323,8 +5195,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4355,8 +5235,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4387,8 +5275,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4419,8 +5315,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4451,8 +5355,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4483,8 +5395,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4515,8 +5435,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4547,8 +5475,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4579,8 +5515,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4611,8 +5555,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4643,8 +5595,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4675,8 +5635,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4707,8 +5675,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4739,8 +5715,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4771,8 +5755,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4803,8 +5795,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4835,8 +5835,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4867,8 +5875,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4899,8 +5915,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4931,8 +5955,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4963,8 +5995,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -4995,8 +6035,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -5027,8 +6075,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -5059,8 +6115,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -5091,8 +6155,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
@@ -5123,8 +6195,16 @@
               "type": "device_if",
               "identifiers": [
                 {
-                  "description": "All Apple Devices",
+                  "description": "Apple keyboards over USB and built in",
                   "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
                 }
               ]
             }
