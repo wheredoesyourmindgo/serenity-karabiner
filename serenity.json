@@ -410,14 +410,14 @@
             },
             {
               "sticky_modifier": {
-                "left_control": "on"
+                "right_control": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_control": "off"
+                "right_control": "off"
               }
             }
           ],
@@ -425,22 +425,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -480,14 +480,14 @@
             },
             {
               "sticky_modifier": {
-                "left_control": "on"
+                "right_control": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_control": "off"
+                "right_control": "off"
               }
             }
           ],
@@ -495,22 +495,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -563,14 +563,14 @@
             },
             {
               "sticky_modifier": {
-                "left_option": "on"
+                "right_option": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_option": "off"
+                "right_option": "off"
               }
             }
           ],
@@ -578,22 +578,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -633,14 +633,14 @@
             },
             {
               "sticky_modifier": {
-                "left_option": "on"
+                "right_option": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_option": "off"
+                "right_option": "off"
               }
             }
           ],
@@ -648,22 +648,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -716,14 +716,14 @@
             },
             {
               "sticky_modifier": {
-                "left_command": "on"
+                "right_command": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_command": "off"
+                "right_command": "off"
               }
             }
           ],
@@ -731,22 +731,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -786,14 +786,14 @@
             },
             {
               "sticky_modifier": {
-                "left_command": "on"
+                "right_command": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_command": "off"
+                "right_command": "off"
               }
             }
           ],
@@ -801,22 +801,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -869,14 +869,14 @@
             },
             {
               "sticky_modifier": {
-                "left_shift": "on"
+                "right_shift": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_shift": "off"
+                "right_shift": "off"
               }
             }
           ],
@@ -884,22 +884,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]
@@ -939,14 +939,14 @@
             },
             {
               "sticky_modifier": {
-                "left_shift": "on"
+                "right_shift": "on"
               }
             }
           ],
           "to_if_held_down": [
             {
               "sticky_modifier": {
-                "left_shift": "off"
+                "right_shift": "off"
               }
             }
           ],
@@ -954,22 +954,22 @@
             "to_if_invoked": [
               {
                 "sticky_modifier": {
-                  "left_control": "off"
+                  "right_control": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_option": "off"
+                  "right_option": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_command": "off"
+                  "right_command": "off"
                 }
               },
               {
                 "sticky_modifier": {
-                  "left_shift": "off"
+                  "right_shift": "off"
                 }
               }
             ]

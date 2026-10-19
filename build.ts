@@ -100,7 +100,10 @@ function fnLayer(
 
 const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) => fnLayer(from, [to]))
 
-const oneShotModifiers: Modifier[] = ['left_control', 'left_option', 'left_command', 'left_shift']
+// Each one-shot arms the right-hand modifier while the key holds the left-hand one. They can't
+// share a key: using up the one-shot releases its modifier, which would also end the hold, so
+// Fn+S then arrow, arrow… would only send Option with the first arrow.
+const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_command', 'right_shift']
 
 /**
  * A one-shot modifier on the Fn layer, like the firmware's Instant One-Shot. The one-shot arms
@@ -108,9 +111,9 @@ const oneShotModifiers: Modifier[] = ['left_control', 'left_option', 'left_comma
  * it was pressed alone). Held for 300 ms it's a plain modifier and disarms itself. If no other
  * key follows within 3 seconds, every armed one-shot clears.
  */
-const oneShotMod = (from: KeyCode, modifier: Modifier) =>
-  fnLayer(from, [key(modifier, 'fn'), {sticky_modifier: {[modifier]: 'on'}}], {
-    to_if_held_down: [{sticky_modifier: {[modifier]: 'off'}}],
+const oneShotMod = (from: KeyCode, held: Modifier, oneShot: Modifier) =>
+  fnLayer(from, [key(held, 'fn'), {sticky_modifier: {[oneShot]: 'on'}}], {
+    to_if_held_down: [{sticky_modifier: {[oneShot]: 'off'}}],
     to_delayed_action: {
       to_if_invoked: oneShotModifiers.map((m) => ({sticky_modifier: {[m]: 'off'}}))
     },
@@ -189,10 +192,10 @@ const rules: Rule[] = [
   rule(
     'Fn+A/S/D/F → Control/Option/Command/Shift (tap for one-shot)',
     [
-      ...oneShotMod('a', 'left_control'),
-      ...oneShotMod('s', 'left_option'),
-      ...oneShotMod('d', 'left_command'),
-      ...oneShotMod('f', 'left_shift')
+      ...oneShotMod('a', 'left_control', 'right_control'),
+      ...oneShotMod('s', 'left_option', 'right_option'),
+      ...oneShotMod('d', 'left_command', 'right_command'),
+      ...oneShotMod('f', 'left_shift', 'right_shift')
     ]
   ),
 
