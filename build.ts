@@ -113,7 +113,9 @@ const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_co
  */
 const oneShotMod = (from: KeyCode, held: Modifier, oneShot: Modifier) =>
   fnLayer(from, [{sticky_modifier: {[oneShot]: 'on'}}, key(held, 'fn')], {
-    to_if_held_down: [{sticky_modifier: {[oneShot]: 'off'}}],
+    // Karabiner releases `to` when to_if_held_down fires, so it presses the modifier again
+    // (last, so it's held until key up).
+    to_if_held_down: [{sticky_modifier: {[oneShot]: 'off'}}, key(held, 'fn')],
     to_delayed_action: {
       to_if_invoked: oneShotModifiers.map((m) => ({sticky_modifier: {[m]: 'off'}}))
     },
