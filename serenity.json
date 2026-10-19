@@ -403,15 +403,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "on"
+              }
+            },
+            {
               "key_code": "left_control",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_control": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -473,15 +473,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "on"
+              }
+            },
+            {
               "key_code": "left_control",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_control": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -556,15 +556,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_option": "on"
+              }
+            },
+            {
               "key_code": "left_option",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_option": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -626,15 +626,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_option": "on"
+              }
+            },
+            {
               "key_code": "left_option",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_option": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -709,15 +709,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_command": "on"
+              }
+            },
+            {
               "key_code": "left_command",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_command": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -779,15 +779,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_command": "on"
+              }
+            },
+            {
               "key_code": "left_command",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_command": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -862,15 +862,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_shift": "on"
+              }
+            },
+            {
               "key_code": "left_shift",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_shift": "on"
-              }
             }
           ],
           "to_if_held_down": [
@@ -932,15 +932,15 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_shift": "on"
+              }
+            },
+            {
               "key_code": "left_shift",
               "modifiers": [
                 "fn"
               ]
-            },
-            {
-              "sticky_modifier": {
-                "right_shift": "on"
-              }
             }
           ],
           "to_if_held_down": [

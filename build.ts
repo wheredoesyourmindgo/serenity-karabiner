@@ -100,9 +100,9 @@ function fnLayer(
 
 const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) => fnLayer(from, [to]))
 
-// Each one-shot arms the right-hand modifier while the key holds the left-hand one. They can't
-// share a key: using up the one-shot releases its modifier, which would also end the hold, so
-// Fn+S then arrow, arrow… would only send Option with the first arrow.
+// Each one-shot arms the right-hand modifier while the key holds the left-hand one, so using up
+// the one-shot (which releases its modifier) can't end the hold. Karabiner only holds the last
+// event in `to` while the key is down, so the held modifier goes last; the one-shot is just armed.
 const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_command', 'right_shift']
 
 /**
@@ -112,7 +112,7 @@ const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_co
  * key follows within 3 seconds, every armed one-shot clears.
  */
 const oneShotMod = (from: KeyCode, held: Modifier, oneShot: Modifier) =>
-  fnLayer(from, [key(held, 'fn'), {sticky_modifier: {[oneShot]: 'on'}}], {
+  fnLayer(from, [{sticky_modifier: {[oneShot]: 'on'}}, key(held, 'fn')], {
     to_if_held_down: [{sticky_modifier: {[oneShot]: 'off'}}],
     to_delayed_action: {
       to_if_invoked: oneShotModifiers.map((m) => ({sticky_modifier: {[m]: 'off'}}))
