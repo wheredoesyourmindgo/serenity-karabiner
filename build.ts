@@ -141,8 +141,8 @@ const rules: Rule[] = [
         to_if_alone: [{key_code: 'spacebar', halt: true}],
         to_if_held_down: [{key_code: 'fn', halt: true}],
         parameters: {
-          'basic.to_if_alone_timeout_milliseconds': 190,
-          'basic.to_if_held_down_threshold_milliseconds': 190
+          'basic.to_if_alone_timeout_milliseconds': 170,
+          'basic.to_if_held_down_threshold_milliseconds': 170
         }
       },
       {optional: ['command', 'control', 'option', 'shift', 'caps_lock']}

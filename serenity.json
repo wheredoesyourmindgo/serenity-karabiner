@@ -166,8 +166,8 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 190,
-            "basic.to_if_held_down_threshold_milliseconds": 190
+            "basic.to_if_alone_timeout_milliseconds": 170,
+            "basic.to_if_held_down_threshold_milliseconds": 170
           },
           "conditions": [
             {
