@@ -43,7 +43,7 @@ All rules apply only to Apple keyboards (vendor ID `1452`).
 - **Layout:** the Serenity letters and punctuation on the alpha keys
 - **Spacebar:** tap for Space, hold for Fn
 - **Fn+G** latches the Fn layer on; **G** or **Caps Lock** releases it
-- **Fn+A/S/D/F:** Control / Option / Command / Shift
+- **Fn+A/S/D/F:** Control / Option / Command / Shift (held, not one-shot as in the firmware)
 - **Fn+Z/X/C/V/B:** Undo / Cut / Copy / Paste / Redo
 - **Fn+J/K/L/;:** arrow keys
 - **Fn+M/Comma/Period/Slash:** Home / Page Down / Page Up / End
