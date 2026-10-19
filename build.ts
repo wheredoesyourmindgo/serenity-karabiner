@@ -106,7 +106,7 @@ const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) =
 const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_command', 'right_shift']
 
 /**
- * A one-shot modifier on the Fn layer, like the firmware's Instant One-Shot. The one-shot arms
+ * A one-shot modifier on the Fn layer, like the firmware's Stackable One-Shot. The one-shot arms
  * the moment the key goes down, so keys chorded together all apply (no key waits to see whether
  * it was pressed alone). Held for 300 ms it's a plain modifier and disarms itself. If no other
  * key follows within 3 seconds, every armed one-shot clears.
