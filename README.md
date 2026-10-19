@@ -10,7 +10,7 @@ With Karabiner-Elements installed, open this link:
 
 (GitHub doesn't make `karabiner://` links clickable. Use the button at [serenity-layout.fyi/software](https://www.serenity-layout.fyi/software), or paste the link into Safari.)
 
-Karabiner asks to import the rules. Click **Import**, then **Enable All** next to **Serenity**.
+Karabiner lists the rules it's about to add. Click **Import**. In the list that opens, find **Serenity** below Karabiner's own **Examples** and click **Enable All** at the bottom of it. Nothing changes until you do.
 
 Or by hand:
 
@@ -19,11 +19,22 @@ curl -fsSL --create-dirs -o ~/.config/karabiner/assets/complex_modifications/ser
   https://raw.githubusercontent.com/wheredoesyourmindgo/serenity-karabiner/main/serenity.json
 ```
 
-Then go to Karabiner-Elements → **Complex Modifications** → **Add predefined rule** → **Serenity** → **Enable All**.
+Then go to Karabiner-Elements → **Complex Modifications** → **Add predefined rule** → **Enable All** at the bottom of **Serenity**.
 
 **Rule order matters.** Karabiner gives rules higher in the list priority, and the Fn layer has to come before **Serenity: Layout**. **Enable All** keeps the order right. If you enable rules one at a time, keep **Serenity: Layout** at the bottom.
 
-Every rule's name starts with **Serenity:**, so you can tell them apart from your own. To update, remove the Serenity rules and import again. The rules leave your other Karabiner settings, devices and rules alone.
+Every rule's name starts with **Serenity:**, so you can tell them apart from your own. The rules leave your other Karabiner settings, devices and rules alone.
+
+## Update
+
+1. In Karabiner-Elements → **Complex Modifications**, delete the rules that start with **Serenity:**.
+2. Delete the copies earlier imports saved. Karabiner keeps a file for every import in `~/.config/karabiner/assets/complex_modifications/`, named by a timestamp, so without this step Serenity is listed twice under **Add predefined rule**:
+
+   ```sh
+   grep -l '"title": "Serenity"' ~/.config/karabiner/assets/complex_modifications/*.json | xargs rm
+   ```
+
+3. Install again as above.
 
 ## What's inside
 
