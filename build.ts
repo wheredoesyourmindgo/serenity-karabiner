@@ -100,17 +100,22 @@ function fnLayer(
 
 const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) => fnLayer(from, [to]))
 
+const oneShotModifiers: Modifier[] = ['left_control', 'left_option', 'left_command', 'left_shift']
+
 /**
- * A one-shot modifier on the Fn layer, like the firmware's Instant One-Shot: held, it's the
- * modifier from the moment it goes down; tapped (under 300 ms, nothing else pressed), it
- * applies to the next key. Left unused, it clears itself after 3 seconds.
+ * A one-shot modifier on the Fn layer, like the firmware's Instant One-Shot. The one-shot arms
+ * the moment the key goes down, so keys chorded together all apply (no key waits to see whether
+ * it was pressed alone). Held for 300 ms it's a plain modifier and disarms itself. If no other
+ * key follows within 3 seconds, every armed one-shot clears.
  */
 const oneShotMod = (from: KeyCode, modifier: Modifier) =>
-  fnLayer(from, [key(modifier, 'fn')], {
-    to_if_alone: [{sticky_modifier: {[modifier]: 'on'}}],
-    to_delayed_action: {to_if_invoked: [{sticky_modifier: {[modifier]: 'off'}}]},
+  fnLayer(from, [key(modifier, 'fn'), {sticky_modifier: {[modifier]: 'on'}}], {
+    to_if_held_down: [{sticky_modifier: {[modifier]: 'off'}}],
+    to_delayed_action: {
+      to_if_invoked: oneShotModifiers.map((m) => ({sticky_modifier: {[m]: 'off'}}))
+    },
     parameters: {
-      'basic.to_if_alone_timeout_milliseconds': 300,
+      'basic.to_if_held_down_threshold_milliseconds': 300,
       'basic.to_delayed_action_delay_milliseconds': 3000
     }
   })
