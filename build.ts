@@ -13,6 +13,9 @@ type Modifier = string
 type ToEvent =
   | {key_code: KeyCode; modifiers?: Modifier[]; halt?: boolean; hold_down_milliseconds?: number}
   | {set_variable: {name: string; value: number}}
+  | {consumer_key_code: string}
+  | {apple_vendor_keyboard_key_code: string}
+  | {generic_desktop: string}
 type Condition =
   | {type: 'variable_if'; name: string; value: number}
   | {type: 'device_if'; identifiers: {description: string; vendor_id: number}[]}
@@ -101,9 +104,9 @@ const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) =
 // Physical (QWERTY) key → the key it types, row by row as on the keyboard.
 const serenityLayout: Record<KeyCode, KeyCode>[] = [
   {hyphen: 'open_bracket', equal_sign: 'close_bracket'},
-  {q: 'q', w: 'l', e: 'd', r: 'w', t: 'v', y: 'j', u: 'f', i: 'o', o: 'u', p: 'hyphen', open_bracket: 'equal_sign', close_bracket: 'slash', backslash: 'backslash'},
+  {q: 'q', w: 'z', e: 'm', r: 'w', t: 'v', y: 'j', u: 'f', i: 'o', o: 'u', p: 'hyphen', open_bracket: 'equal_sign', close_bracket: 'slash', backslash: 'backslash'},
   {a: 'r', s: 'n', d: 't', f: 's', g: 'g', h: 'y', j: 'h', k: 'e', l: 'a', semicolon: 'i', quote: 'semicolon'},
-  {z: 'x', x: 'z', c: 'm', v: 'c', b: 'b', n: 'k', m: 'p', comma: 'quote', period: 'comma', slash: 'period'}
+  {z: 'x', x: 'l', c: 'd', v: 'c', b: 'b', n: 'k', m: 'p', comma: 'quote', period: 'comma', slash: 'period'}
 ]
 
 // --- Rules --------------------------------------------------------------------
@@ -229,15 +232,25 @@ const rules: Rule[] = [
     })
   ),
 
-  // No lock-screen condition, so these also work on the lock screen.
+  // Everything moves down a row: Fn+top row already gives F1–F12, so Fn+number row gives
+  // what the top row does without Fn. Sent as the media keys themselves, so it doesn't
+  // depend on macOS's "Use F1, F2, etc. keys as standard function keys" setting.
   rule(
-    'Fn+Number Row → F1–F12',
-    ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'hyphen', 'equal_sign'].map((from, i) => ({
-      type: 'basic' as const,
-      from: {key_code: from, modifiers: {mandatory: ['fn'], optional: ['any']}},
-      to: [key(`f${i + 1}`)],
-      conditions: [appleKeyboards]
-    }))
+    'Fn+Number Row → Top Row Media Keys',
+    fnLayerMap([
+      ['1', {consumer_key_code: 'display_brightness_decrement'}],
+      ['2', {consumer_key_code: 'display_brightness_increment'}],
+      ['3', {apple_vendor_keyboard_key_code: 'mission_control'}],
+      ['4', {apple_vendor_keyboard_key_code: 'spotlight'}],
+      ['5', {consumer_key_code: 'dictation'}],
+      ['6', {generic_desktop: 'do_not_disturb'}], // macOS 14 and later
+      ['7', {consumer_key_code: 'rewind'}],
+      ['8', {consumer_key_code: 'play_or_pause'}],
+      ['9', {consumer_key_code: 'fast_forward'}],
+      ['0', {consumer_key_code: 'mute'}],
+      ['hyphen', {consumer_key_code: 'volume_decrement'}],
+      ['equal_sign', {consumer_key_code: 'volume_increment'}]
+    ])
   ),
 
   rule('Layout', [

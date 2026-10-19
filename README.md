@@ -39,7 +39,7 @@ All rules apply only to Apple keyboards (vendor ID `1452`).
 - **Fn+Q–P:** 1–0
 - **Fn+H:** select word (hold to select line)
 - **Fn+N:** Caps Lock
-- **Fn + number row:** F1–F12
+- **Fn + number row:** what the top row does without Fn (brightness, Mission Control, Spotlight, Dictation, Do Not Disturb, media, volume). Fn + the top row still gives F1–F12, so everything moves down a row
 - **Caps Lock ↔ Escape** swap
 - **Right Shift:** tap for Enter, hold for Shift
 
