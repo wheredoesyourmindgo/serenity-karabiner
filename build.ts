@@ -16,6 +16,7 @@ type ToEvent =
   | {consumer_key_code: string}
   | {apple_vendor_keyboard_key_code: string}
   | {generic_desktop: string}
+  | {sticky_modifier: Record<Modifier, 'on' | 'off' | 'toggle'>}
 type Condition =
   | {type: 'variable_if'; name: string; value: number}
   | {type: 'device_if'; identifiers: {description: string; vendor_id: number}[]}
@@ -27,7 +28,7 @@ type Manipulator = {
   to_if_alone?: ToEvent[]
   to_if_held_down?: ToEvent[]
   to_after_key_up?: ToEvent[]
-  to_delayed_action?: {to_if_canceled: ToEvent[]}
+  to_delayed_action?: {to_if_invoked?: ToEvent[]; to_if_canceled?: ToEvent[]}
   parameters?: Record<string, number>
   conditions: Condition[]
 }
@@ -99,6 +100,21 @@ function fnLayer(
 
 const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) => fnLayer(from, [to]))
 
+/**
+ * A one-shot modifier on the Fn layer, like the firmware's Instant One-Shot: held, it's the
+ * modifier from the moment it goes down; tapped (under 300 ms, nothing else pressed), it
+ * applies to the next key. Left unused, it clears itself after 3 seconds.
+ */
+const oneShotMod = (from: KeyCode, modifier: Modifier) =>
+  fnLayer(from, [key(modifier, 'fn')], {
+    to_if_alone: [{sticky_modifier: {[modifier]: 'on'}}],
+    to_delayed_action: {to_if_invoked: [{sticky_modifier: {[modifier]: 'off'}}]},
+    parameters: {
+      'basic.to_if_alone_timeout_milliseconds': 300,
+      'basic.to_delayed_action_delay_milliseconds': 3000
+    }
+  })
+
 // --- Serenity layout ----------------------------------------------------------
 
 // Physical (QWERTY) key → the key it types, row by row as on the keyboard.
@@ -166,13 +182,13 @@ const rules: Rule[] = [
   ]),
 
   rule(
-    'Fn+A/S/D/F → Control/Option/Command/Shift',
-    fnLayerMap([
-      ['a', key('left_control', 'fn')],
-      ['s', key('left_option', 'fn')],
-      ['d', key('left_command', 'fn')],
-      ['f', key('left_shift', 'fn')]
-    ])
+    'Fn+A/S/D/F → Control/Option/Command/Shift (tap for one-shot)',
+    [
+      ...oneShotMod('a', 'left_control'),
+      ...oneShotMod('s', 'left_option'),
+      ...oneShotMod('d', 'left_command'),
+      ...oneShotMod('f', 'left_shift')
+    ]
   ),
 
   rule(

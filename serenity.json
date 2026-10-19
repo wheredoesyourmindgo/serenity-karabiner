@@ -386,7 +386,7 @@
       ]
     },
     {
-      "description": "Serenity: Fn+A/S/D/F → Control/Option/Command/Shift",
+      "description": "Serenity: Fn+A/S/D/F → Control/Option/Command/Shift (tap for one-shot)",
       "manipulators": [
         {
           "type": "basic",
@@ -409,6 +409,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_control": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_control": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -439,6 +459,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_control": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_control": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -482,6 +522,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_option": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_option": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -512,6 +572,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_option": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_option": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -555,6 +635,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_command": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_command": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -585,6 +685,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_command": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_command": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -628,6 +748,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_shift": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_shift": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -658,6 +798,26 @@
               ]
             }
           ],
+          "to_if_alone": [
+            {
+              "sticky_modifier": {
+                "left_shift": "on"
+              }
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "sticky_modifier": {
+                  "left_shift": "off"
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 300,
+            "basic.to_delayed_action_delay_milliseconds": 3000
+          },
           "conditions": [
             {
               "type": "variable_if",
