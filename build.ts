@@ -18,7 +18,7 @@ type ToEvent =
   | {generic_desktop: string}
   | {sticky_modifier: Record<Modifier, 'on' | 'off' | 'toggle'>}
 type Condition =
-  | {type: 'variable_if'; name: string; value: number}
+  | {type: 'variable_if' | 'variable_unless'; name: string; value: number}
   | {type: 'device_if'; identifiers: {description: string; vendor_id?: number; is_built_in_keyboard?: boolean}[]}
 type FromModifiers = {mandatory?: Modifier[]; optional?: Modifier[]}
 type Manipulator = {
@@ -33,6 +33,7 @@ type Manipulator = {
   conditions: Condition[]
 }
 type Rule = {description: string; manipulators: Manipulator[]}
+type Fields = Omit<Manipulator, 'type' | 'from' | 'conditions'> & {keepsSelectWord?: boolean}
 
 const OUTPUT = new URL('./serenity.json', import.meta.url)
 
@@ -54,6 +55,10 @@ const unlocked: Condition = {type: 'variable_if', name: 'is_lock_screen', value:
 // Fn+G latches the Fn layer on; G or Caps Lock releases it.
 const fnLatched: Condition = {type: 'variable_if', name: 'fn_toggle_on', value: 1}
 const fnUnlatched: Condition = {type: 'variable_if', name: 'fn_toggle_on', value: 0}
+// Fn+H's selection: 0 none, 1 words, 2 lines. While it's set, Fn+H extends it.
+const selectingWords: Condition = {type: 'variable_if', name: 'select_word', value: 1}
+const selectingLines: Condition = {type: 'variable_if', name: 'select_word', value: 2}
+const selecting: Condition = {type: 'variable_unless', name: 'select_word', value: 0}
 
 // --- Helpers ------------------------------------------------------------------
 
@@ -61,6 +66,15 @@ const key = (key_code: KeyCode, ...modifiers: Modifier[]): ToEvent =>
   modifiers.length ? {key_code, modifiers} : {key_code}
 
 const setFnLatch = (value: number): ToEvent => ({set_variable: {name: 'fn_toggle_on', value}})
+const setSelectWord = (value: number): ToEvent => ({set_variable: {name: 'select_word', value}})
+
+// Like the firmware's Select Word, a selection ends when any other key is
+// pressed, so every remap below sends this unless it's a modifier or layer key
+// (`keepsSelectWord`). Karabiner's to_delayed_action can't do it: the next Fn+H
+// cancels it too, which would end the selection before Fn+H checks it.
+const endSelectWord = setSelectWord(0)
+const endingSelectWord = (to: ToEvent[] | undefined, keepsSelectWord = false) =>
+  to && !keepsSelectWord ? [endSelectWord, ...to] : to
 
 // Caps Lock needs a held press, then vk_none so the release registers.
 const capsLock: ToEvent[] = [{hold_down_milliseconds: 100, key_code: 'caps_lock'}, {key_code: 'vk_none'}]
@@ -73,9 +87,15 @@ const rule = (description: string, manipulators: Manipulator[]): Rule => ({
 /** A plain remap on Apple keyboards while the screen is unlocked. */
 const remap = (
   from: KeyCode,
-  fields: Omit<Manipulator, 'type' | 'from' | 'conditions'>,
+  {keepsSelectWord, ...fields}: Fields,
   modifiers: FromModifiers = {optional: ['any']}
-): Manipulator => ({type: 'basic', from: {key_code: from, modifiers}, ...fields, conditions: [unlocked, appleKeyboards]})
+): Manipulator => ({
+  type: 'basic',
+  from: {key_code: from, modifiers},
+  ...fields,
+  to: endingSelectWord(fields.to, keepsSelectWord),
+  conditions: [unlocked, appleKeyboards]
+})
 
 /**
  * A Fn-layer key: Fn+`from` sends `to`, and so does `from` alone while the
@@ -84,27 +104,48 @@ const remap = (
 function fnLayer(
   from: KeyCode,
   to: ToEvent[],
-  {mandatory = [], optional = ['any'], ...fields}: FromModifiers & Omit<Manipulator, 'type' | 'from' | 'conditions'> = {}
+  {
+    mandatory = [],
+    optional = ['any'],
+    keepsSelectWord,
+    conditions = [],
+    ...fields
+  }: FromModifiers & Fields & {conditions?: Condition[]} = {}
 ): Manipulator[] {
+  const events = endingSelectWord(to, keepsSelectWord)
   return [
     {
       type: 'basic',
       from: {key_code: from, modifiers: {mandatory: ['fn', ...mandatory], optional}},
-      to,
+      to: events,
       ...fields,
-      conditions: [unlocked, appleKeyboards]
+      conditions: [...conditions, unlocked, appleKeyboards]
     },
     {
       type: 'basic',
       from: mandatory.length ? {key_code: from, modifiers: {mandatory, optional}} : {key_code: from},
-      to,
+      to: events,
       ...fields,
-      conditions: [fnLatched, unlocked, appleKeyboards]
+      conditions: [...conditions, fnLatched, unlocked, appleKeyboards]
     }
   ]
 }
 
-const fnLayerMap = (pairs: [KeyCode, ToEvent][]) => pairs.flatMap(([from, to]) => fnLayer(from, [to]))
+const fnLayerMap = (pairs: [KeyCode, ToEvent][], fields: Fields = {}) =>
+  pairs.flatMap(([from, to]) => fnLayer(from, [to], fields))
+
+/**
+ * One Fn+H case of Select Word. `to` sets `select_word` first; the last event
+ * is held, so holding Fn+H extends the selection with key repeat. The selection
+ * also ends after 5 seconds without Fn+H, as in the firmware.
+ */
+const selectWord = (to: ToEvent[], fields: FromModifiers & Fields & {conditions?: Condition[]} = {}) =>
+  fnLayer('h', to, {
+    keepsSelectWord: true,
+    to_delayed_action: {to_if_invoked: [endSelectWord]},
+    parameters: {'basic.to_delayed_action_delay_milliseconds': 5000},
+    ...fields
+  })
 
 // Each one-shot arms the right-hand modifier while the key holds the left-hand one, so using up
 // the one-shot (which releases its modifier) can't end the hold. Karabiner only holds the last
@@ -119,6 +160,7 @@ const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_co
  */
 const oneShotMod = (from: KeyCode, held: Modifier, oneShot: Modifier) =>
   fnLayer(from, [{sticky_modifier: {[oneShot]: 'on'}}, key(held, 'fn')], {
+    keepsSelectWord: true,
     // Karabiner releases `to` when to_if_held_down fires, so it presses the modifier again
     // (last, so it's held until key up).
     to_if_held_down: [{sticky_modifier: {[oneShot]: 'off'}}, key(held, 'fn')],
@@ -170,7 +212,7 @@ const rules: Rule[] = [
       'spacebar',
       {
         to_delayed_action: {to_if_canceled: [key('spacebar')]},
-        to_if_alone: [{key_code: 'spacebar', halt: true}],
+        to_if_alone: [endSelectWord, {key_code: 'spacebar', halt: true}],
         to_if_held_down: [{key_code: 'fn', halt: true}],
         parameters: {
           'basic.to_if_alone_timeout_milliseconds': 170,
@@ -187,8 +229,9 @@ const rules: Rule[] = [
     remap('right_shift', {
       to: [key('right_shift')],
       to_after_key_up: [key('right_shift')],
-      to_if_alone: [key('return_or_enter')],
-      to_if_held_down: [key('right_shift')]
+      to_if_alone: [endSelectWord, key('return_or_enter')],
+      to_if_held_down: [key('right_shift')],
+      keepsSelectWord: true
     })
   ]),
 
@@ -253,16 +296,32 @@ const rules: Rule[] = [
     })
   ]),
 
-  rule(
-    'Fn+H → Select Word (hold for Select Line)',
-    fnLayer('h', [key('right_arrow'), key('left_arrow', 'left_option'), key('right_arrow', 'left_option', 'left_shift')], {
-      to_if_held_down: [
-        key('right_arrow'),
-        key('left_arrow', 'left_command'),
-        key('right_arrow', 'left_command', 'left_shift')
-      ]
-    })
-  ),
+  // getreuer's Select Word, as in the firmware: Fn+H selects the word, and
+  // again extends to the next word; with Shift it selects lines instead.
+  // Specific cases first: Karabiner uses the first manipulator that matches.
+  rule('Fn+H → Select Word (with Shift, Select Line)', [
+    // Extend down a line; on release, finish the selection at the line's end.
+    ...selectWord([key('down_arrow', 'left_shift')], {
+      mandatory: ['shift'],
+      conditions: [selectingLines],
+      to_after_key_up: [key('right_arrow', 'left_command', 'left_shift')]
+    }),
+    // From a word selection, extend to the end of the line.
+    ...selectWord([setSelectWord(2), key('right_arrow', 'left_command', 'left_shift')], {
+      mandatory: ['shift'],
+      conditions: [selectingWords]
+    }),
+    ...selectWord([setSelectWord(2), key('left_arrow', 'left_command'), key('right_arrow', 'left_command', 'left_shift')], {
+      mandatory: ['shift']
+    }),
+    ...selectWord([setSelectWord(1), key('right_arrow', 'left_option', 'left_shift')], {conditions: [selecting]}),
+    ...selectWord([
+      setSelectWord(1),
+      key('right_arrow', 'left_option'),
+      key('left_arrow', 'left_option'),
+      key('right_arrow', 'left_option', 'left_shift')
+    ])
+  ]),
 
   // Everything moves down a row: Fn+top row already gives F1–F12, so Fn+number row gives
   // what the top row does without Fn. Sent as the media keys themselves, so it doesn't
@@ -293,7 +352,23 @@ const rules: Rule[] = [
       {mandatory: ['shift', 'command'], optional: ['control', 'option']}
     ),
     ...serenityLayout.flatMap((row) => Object.entries(row).map(([from, to]) => remap(from, {to: [key(to)]})))
-  ])
+  ]),
+
+  // Keys no rule above remaps, passed through unchanged, so they end a
+  // selection too. Only active during a selection.
+  rule(
+    'Other keys end Select Word',
+    [
+      ...['return_or_enter', 'tab', 'delete_or_backspace', 'delete_forward', 'grave_accent_and_tilde'],
+      ...['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+      ...['left_arrow', 'right_arrow', 'up_arrow', 'down_arrow', 'home', 'end', 'page_up', 'page_down']
+    ].map((from) => ({
+      type: 'basic' as const,
+      from: {key_code: from, modifiers: {optional: ['any']}},
+      to: [endSelectWord, key(from)],
+      conditions: [selecting, appleKeyboards]
+    }))
+  )
 ]
 
 // --- Output -------------------------------------------------------------------

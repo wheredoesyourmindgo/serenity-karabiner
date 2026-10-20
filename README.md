@@ -48,7 +48,7 @@ All rules apply only to Apple keyboards: built in, over USB (vendor ID `1452`) o
 - **Fn+J/K/L/;:** arrow keys
 - **Fn+M/Comma/Period/Slash:** Home / Page Down / Page Up / End
 - **Fn+Q–P:** 1–0
-- **Fn+H:** select word (hold to select line)
+- **Fn+H:** select word, and again to extend to the next word (hold to keep extending); with Shift, select line, and again to extend down a line. Any other key, or 5 seconds without Fn+H, starts a new selection
 - **Fn+N:** Caps Lock
 - **Fn + number row:** what the top row does without Fn (brightness, Mission Control, Spotlight, Dictation, Do Not Disturb, media, volume). Fn + the top row still gives F1–F12, so everything moves down a row
 - **Caps Lock ↔ Escape** swap

@@ -179,6 +179,12 @@
           },
           "to_if_alone": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "spacebar",
               "halt": true
             }
@@ -238,6 +244,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "spacebar"
             }
           ],
@@ -272,6 +284,12 @@
             "key_code": "spacebar"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "spacebar"
             }
@@ -333,6 +351,12 @@
           ],
           "to_if_alone": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "return_or_enter"
             }
           ],
@@ -383,6 +407,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "escape"
             }
           ],
@@ -422,6 +452,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "hold_down_milliseconds": 100,
               "key_code": "caps_lock"
@@ -1204,6 +1240,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "z",
               "modifiers": [
                 "left_command"
@@ -1241,6 +1283,12 @@
             "key_code": "z"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "z",
               "modifiers": [
@@ -1293,6 +1341,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "x",
               "modifiers": [
                 "left_command"
@@ -1330,6 +1384,12 @@
             "key_code": "x"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "x",
               "modifiers": [
@@ -1382,6 +1442,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "c",
               "modifiers": [
                 "left_command"
@@ -1419,6 +1485,12 @@
             "key_code": "c"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "c",
               "modifiers": [
@@ -1471,6 +1543,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "v",
               "modifiers": [
                 "left_command"
@@ -1508,6 +1586,12 @@
             "key_code": "v"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "v",
               "modifiers": [
@@ -1560,6 +1644,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "z",
               "modifiers": [
                 "left_command",
@@ -1598,6 +1688,12 @@
             "key_code": "b"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "z",
               "modifiers": [
@@ -1656,6 +1752,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "left_arrow"
             }
           ],
@@ -1690,6 +1792,12 @@
             "key_code": "j"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "left_arrow"
             }
@@ -1739,6 +1847,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "down_arrow"
             }
           ],
@@ -1773,6 +1887,12 @@
             "key_code": "k"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "down_arrow"
             }
@@ -1822,6 +1942,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "up_arrow"
             }
           ],
@@ -1856,6 +1982,12 @@
             "key_code": "l"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "up_arrow"
             }
@@ -1905,6 +2037,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "right_arrow"
             }
           ],
@@ -1939,6 +2077,12 @@
             "key_code": "semicolon"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "right_arrow"
             }
@@ -1993,6 +2137,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "home"
             }
           ],
@@ -2027,6 +2177,12 @@
             "key_code": "m"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "home"
             }
@@ -2076,6 +2232,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "page_down"
             }
           ],
@@ -2110,6 +2272,12 @@
             "key_code": "comma"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "page_down"
             }
@@ -2159,6 +2327,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "page_up"
             }
           ],
@@ -2193,6 +2367,12 @@
             "key_code": "period"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "page_up"
             }
@@ -2242,6 +2422,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "end"
             }
           ],
@@ -2276,6 +2462,12 @@
             "key_code": "slash"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "end"
             }
@@ -2330,6 +2522,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "1"
             }
           ],
@@ -2364,6 +2562,12 @@
             "key_code": "q"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "1"
             }
@@ -2413,6 +2617,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "2"
             }
           ],
@@ -2447,6 +2657,12 @@
             "key_code": "w"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "2"
             }
@@ -2496,6 +2712,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "3"
             }
           ],
@@ -2530,6 +2752,12 @@
             "key_code": "e"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "3"
             }
@@ -2579,6 +2807,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "4"
             }
           ],
@@ -2613,6 +2847,12 @@
             "key_code": "r"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "4"
             }
@@ -2662,6 +2902,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "5"
             }
           ],
@@ -2696,6 +2942,12 @@
             "key_code": "t"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "5"
             }
@@ -2745,6 +2997,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "6"
             }
           ],
@@ -2779,6 +3037,12 @@
             "key_code": "y"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "6"
             }
@@ -2828,6 +3092,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "7"
             }
           ],
@@ -2862,6 +3132,12 @@
             "key_code": "u"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "7"
             }
@@ -2911,6 +3187,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "8"
             }
           ],
@@ -2945,6 +3227,12 @@
             "key_code": "i"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "8"
             }
@@ -2994,6 +3282,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "9"
             }
           ],
@@ -3028,6 +3322,12 @@
             "key_code": "o"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "9"
             }
@@ -3077,6 +3377,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "0"
             }
           ],
@@ -3111,6 +3417,12 @@
             "key_code": "p"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "0"
             }
@@ -3165,6 +3477,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "hold_down_milliseconds": 100,
               "key_code": "caps_lock"
             },
@@ -3203,6 +3521,12 @@
             "key_code": "n"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "hold_down_milliseconds": 100,
               "key_code": "caps_lock"
@@ -3258,6 +3582,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "delete_or_backspace"
             }
           ],
@@ -3292,6 +3622,12 @@
             "key_code": "delete_or_backspace"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "delete_or_backspace"
             }
@@ -3343,6 +3679,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "delete_forward"
             }
           ],
@@ -3386,6 +3728,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "delete_forward"
             }
@@ -3437,6 +3785,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "k",
               "modifiers": [
@@ -3485,6 +3839,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "k",
               "modifiers": [
@@ -3525,7 +3885,7 @@
       ]
     },
     {
-      "description": "Serenity: Fn+H → Select Word (hold for Select Line)",
+      "description": "Serenity: Fn+H → Select Word (with Shift, Select Line)",
       "manipulators": [
         {
           "type": "basic",
@@ -3533,7 +3893,8 @@
             "key_code": "h",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "fn",
+                "shift"
               ],
               "optional": [
                 "any"
@@ -3542,25 +3903,310 @@
           },
           "to": [
             {
-              "key_code": "right_arrow"
-            },
-            {
-              "key_code": "left_arrow",
+              "key_code": "down_arrow",
               "modifiers": [
-                "left_option"
-              ]
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_option",
                 "left_shift"
               ]
             }
           ],
-          "to_if_held_down": [
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "to_after_key_up": [
             {
-              "key_code": "right_arrow"
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "select_word",
+              "value": 2
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "to_after_key_up": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "select_word",
+              "value": 2
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_toggle_on",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 2
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "select_word",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 2
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "select_word",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_toggle_on",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 2
+              }
             },
             {
               "key_code": "left_arrow",
@@ -3576,6 +4222,313 @@
               ]
             }
           ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 2
+              }
+            },
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "fn_toggle_on",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "variable_if",
+              "name": "fn_toggle_on",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option"
+              ]
+            },
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_option"
+              ]
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -3608,7 +4561,16 @@
           },
           "to": [
             {
-              "key_code": "right_arrow"
+              "set_variable": {
+                "name": "select_word",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option"
+              ]
             },
             {
               "key_code": "left_arrow",
@@ -3624,24 +4586,19 @@
               ]
             }
           ],
-          "to_if_held_down": [
-            {
-              "key_code": "right_arrow"
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "select_word",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 5000
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -3692,6 +4649,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "display_brightness_decrement"
             }
           ],
@@ -3726,6 +4689,12 @@
             "key_code": "1"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "display_brightness_decrement"
             }
@@ -3775,6 +4744,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "display_brightness_increment"
             }
           ],
@@ -3809,6 +4784,12 @@
             "key_code": "2"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "display_brightness_increment"
             }
@@ -3858,6 +4839,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "apple_vendor_keyboard_key_code": "mission_control"
             }
           ],
@@ -3892,6 +4879,12 @@
             "key_code": "3"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "apple_vendor_keyboard_key_code": "mission_control"
             }
@@ -3941,6 +4934,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "apple_vendor_keyboard_key_code": "spotlight"
             }
           ],
@@ -3975,6 +4974,12 @@
             "key_code": "4"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "apple_vendor_keyboard_key_code": "spotlight"
             }
@@ -4024,6 +5029,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "dictation"
             }
           ],
@@ -4058,6 +5069,12 @@
             "key_code": "5"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "dictation"
             }
@@ -4107,6 +5124,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "generic_desktop": "do_not_disturb"
             }
           ],
@@ -4141,6 +5164,12 @@
             "key_code": "6"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "generic_desktop": "do_not_disturb"
             }
@@ -4190,6 +5219,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "rewind"
             }
           ],
@@ -4224,6 +5259,12 @@
             "key_code": "7"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "rewind"
             }
@@ -4273,6 +5314,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "play_or_pause"
             }
           ],
@@ -4307,6 +5354,12 @@
             "key_code": "8"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "play_or_pause"
             }
@@ -4356,6 +5409,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "fast_forward"
             }
           ],
@@ -4390,6 +5449,12 @@
             "key_code": "9"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "fast_forward"
             }
@@ -4439,6 +5504,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "mute"
             }
           ],
@@ -4473,6 +5544,12 @@
             "key_code": "0"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "mute"
             }
@@ -4522,6 +5599,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "volume_decrement"
             }
           ],
@@ -4556,6 +5639,12 @@
             "key_code": "hyphen"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "volume_decrement"
             }
@@ -4605,6 +5694,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "consumer_key_code": "volume_increment"
             }
           ],
@@ -4639,6 +5734,12 @@
             "key_code": "equal_sign"
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "consumer_key_code": "volume_increment"
             }
@@ -4694,6 +5795,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "delete_forward"
             }
           ],
@@ -4739,6 +5846,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "k",
               "modifiers": [
                 "left_control"
@@ -4782,6 +5895,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "open_bracket"
             }
           ],
@@ -4821,6 +5940,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "close_bracket"
             }
@@ -4862,6 +5987,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "q"
             }
           ],
@@ -4901,6 +6032,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "z"
             }
@@ -4942,6 +6079,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "m"
             }
           ],
@@ -4981,6 +6124,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "w"
             }
@@ -5022,6 +6171,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "v"
             }
           ],
@@ -5061,6 +6216,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "j"
             }
@@ -5102,6 +6263,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "f"
             }
           ],
@@ -5141,6 +6308,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "o"
             }
@@ -5182,6 +6355,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "u"
             }
           ],
@@ -5221,6 +6400,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "hyphen"
             }
@@ -5262,6 +6447,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "equal_sign"
             }
           ],
@@ -5301,6 +6492,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "slash"
             }
@@ -5342,6 +6539,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "backslash"
             }
           ],
@@ -5381,6 +6584,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "r"
             }
@@ -5422,6 +6631,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "n"
             }
           ],
@@ -5461,6 +6676,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "t"
             }
@@ -5502,6 +6723,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "s"
             }
           ],
@@ -5541,6 +6768,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "g"
             }
@@ -5582,6 +6815,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "y"
             }
           ],
@@ -5621,6 +6860,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "h"
             }
@@ -5662,6 +6907,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "e"
             }
           ],
@@ -5701,6 +6952,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "a"
             }
@@ -5742,6 +6999,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "i"
             }
           ],
@@ -5781,6 +7044,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "semicolon"
             }
@@ -5822,6 +7091,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "x"
             }
           ],
@@ -5861,6 +7136,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "l"
             }
@@ -5902,6 +7183,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "d"
             }
           ],
@@ -5941,6 +7228,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "c"
             }
@@ -5982,6 +7275,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "b"
             }
           ],
@@ -6021,6 +7320,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "k"
             }
@@ -6062,6 +7367,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "p"
             }
           ],
@@ -6101,6 +7412,12 @@
             }
           },
           "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
             {
               "key_code": "quote"
             }
@@ -6142,6 +7459,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "comma"
             }
           ],
@@ -6182,6 +7505,12 @@
           },
           "to": [
             {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
               "key_code": "period"
             }
           ],
@@ -6189,6 +7518,1069 @@
             {
               "type": "variable_if",
               "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Serenity: Other keys end Select Word",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "tab"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_forward",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "delete_forward"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "4"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "5"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "6"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "7"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "8"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "9"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "0"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "home",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "home"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "end",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "end"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_up",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "page_up"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_down",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "page_down"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
               "value": 0
             },
             {
