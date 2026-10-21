@@ -41,7 +41,7 @@ Every rule's name starts with **Serenity:**, so you can tell them apart from you
 All rules apply only to Apple keyboards: built in, over USB (vendor ID `1452`) or over Bluetooth (vendor ID `76`). QMK and other keyboards pass through untouched.
 
 - **Layout:** the Serenity letters and punctuation on the alpha keys
-- **Spacebar:** tap for Space, hold for Fn
+- **Bottom row:** the left modifiers move one key right, reading Control / Option / Command / Fn like the firmware's bottom row. Hold Left Command (now Fn) for the Fn layer, right beside the spacebar
 - **Fn+G** latches the Fn layer on; **G** or **Caps Lock** releases it
 - **Fn+A/S/D/F:** Control / Option / Command / Shift. Hold for a normal modifier; tap (under 300 ms) for a one-shot that applies to the next key and clears itself after 3 seconds, as in the firmware
 - **Fn+Z/X/C/V/B:** Undo / Cut / Copy / Paste / Redo
@@ -53,6 +53,10 @@ All rules apply only to Apple keyboards: built in, over USB (vendor ID `1452`) o
 - **Fn + number row:** what the top row does without Fn (brightness, Mission Control, Spotlight, Dictation, Do Not Disturb, media, volume). Fn + the top row still gives F1–F12, so everything moves down a row
 - **Caps Lock ↔ Escape** swap
 - **Right Shift:** tap for Enter, hold for Shift
+
+### Globe key
+
+The Fn key still sends a real Fn/Globe, so tapping it alone does whatever **Press 🌐 key to** says in System Settings → Keyboard (by default, show the emoji picker or change input source). Set it to **Do Nothing**.
 
 ### Lock screen
 

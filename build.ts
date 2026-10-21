@@ -207,21 +207,18 @@ const rules: Rule[] = [
     }
   ]),
 
-  rule('Spacebar → Space on tap, Fn on hold', [
-    remap(
-      'spacebar',
-      {
-        to_delayed_action: {to_if_canceled: [key('spacebar')]},
-        to_if_alone: [endSelectWord, {key_code: 'spacebar', halt: true}],
-        to_if_held_down: [{key_code: 'fn', halt: true}],
-        parameters: {
-          'basic.to_if_alone_timeout_milliseconds': 170,
-          'basic.to_if_held_down_threshold_milliseconds': 170
-        }
-      },
-      {optional: ['command', 'control', 'option', 'shift', 'caps_lock']}
-    )
-  ]),
+  // The bottom-left modifiers move one key right, so Fn lands on Left Command, beside the
+  // spacebar, where the firmware's Num/Nav key is. They read Control, Option, Command, Fn
+  // like the firmware's bottom row. Being modifiers, they hold with no tap/hold timing.
+  rule(
+    'Fn/Globe, Control, Option, Command → Control, Option, Command, Fn',
+    [
+      ['fn', 'left_control'],
+      ['left_control', 'left_option'],
+      ['left_option', 'left_command'],
+      ['left_command', 'fn']
+    ].map(([from, to]) => remap(from, {to: [key(to)], keepsSelectWord: true}))
+  ),
 
   rule('Fn+Spacebar → Space', fnLayer('spacebar', [key('spacebar')])),
 
@@ -359,7 +356,7 @@ const rules: Rule[] = [
   rule(
     'Other keys end Select Word',
     [
-      ...['return_or_enter', 'tab', 'delete_or_backspace', 'delete_forward', 'grave_accent_and_tilde'],
+      ...['spacebar', 'return_or_enter', 'tab', 'delete_or_backspace', 'delete_forward', 'grave_accent_and_tilde'],
       ...['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
       ...['left_arrow', 'right_arrow', 'up_arrow', 'down_arrow', 'home', 'end', 'page_up', 'page_down']
     ].map((from) => ({

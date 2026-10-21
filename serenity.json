@@ -154,51 +154,143 @@
       ]
     },
     {
-      "description": "Serenity: Spacebar → Space on tap, Fn on hold",
+      "description": "Serenity: Fn/Globe, Control, Option, Command → Control, Option, Command, Fn",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "spacebar",
+            "key_code": "fn",
             "modifiers": {
               "optional": [
-                "command",
-                "control",
-                "option",
-                "shift",
-                "caps_lock"
+                "any"
               ]
             }
           },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "key_code": "spacebar"
-              }
-            ]
-          },
-          "to_if_alone": [
+          "to": [
             {
-              "set_variable": {
-                "name": "select_word",
-                "value": 0
-              }
+              "key_code": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
             },
             {
-              "key_code": "spacebar",
-              "halt": true
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
             }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "fn",
-              "halt": true
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
             }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 170,
-            "basic.to_if_held_down_threshold_milliseconds": 170
           },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "is_lock_screen",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ],
           "conditions": [
             {
               "type": "variable_if",
@@ -7544,6 +7636,52 @@
     {
       "description": "Serenity: Other keys end Select Word",
       "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "select_word",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "select_word",
+              "value": 0
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "description": "Apple keyboards over USB and built in",
+                  "vendor_id": 1452
+                },
+                {
+                  "description": "Apple keyboards over Bluetooth",
+                  "vendor_id": 76
+                },
+                {
+                  "description": "Any built-in keyboard",
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
