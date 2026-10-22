@@ -33,7 +33,10 @@ type Manipulator = {
   conditions: Condition[]
 }
 type Rule = {description: string; manipulators: Manipulator[]}
-type Fields = Omit<Manipulator, 'type' | 'from' | 'conditions'> & {keepsSelectWord?: boolean}
+type Fields = Omit<Manipulator, 'type' | 'from' | 'conditions'> & {
+  keepsSelectWord?: boolean
+  keepsCapsWord?: boolean
+}
 
 const OUTPUT = new URL('./serenity.json', import.meta.url)
 
@@ -59,6 +62,10 @@ const fnUnlatched: Condition = {type: 'variable_if', name: 'fn_toggle_on', value
 const selectingWords: Condition = {type: 'variable_if', name: 'select_word', value: 1}
 const selectingLines: Condition = {type: 'variable_if', name: 'select_word', value: 2}
 const selecting: Condition = {type: 'variable_unless', name: 'select_word', value: 0}
+// Caps Word, as in the firmware: double-tap Left Shift to type the next word in capitals.
+const capsWording: Condition = {type: 'variable_if', name: 'caps_word', value: 1}
+// Left Shift was just tapped alone, so another tap now turns Caps Word on.
+const shiftTapped: Condition = {type: 'variable_if', name: 'left_shift_tapped', value: 1}
 
 // --- Helpers ------------------------------------------------------------------
 
@@ -67,14 +74,24 @@ const key = (key_code: KeyCode, ...modifiers: Modifier[]): ToEvent =>
 
 const setFnLatch = (value: number): ToEvent => ({set_variable: {name: 'fn_toggle_on', value}})
 const setSelectWord = (value: number): ToEvent => ({set_variable: {name: 'select_word', value}})
+const setCapsWord = (value: number): ToEvent => ({set_variable: {name: 'caps_word', value}})
+const setShiftTapped = (value: number): ToEvent => ({set_variable: {name: 'left_shift_tapped', value}})
 
 // Like the firmware's Select Word, a selection ends when any other key is
 // pressed, so every remap below sends this unless it's a modifier or layer key
 // (`keepsSelectWord`). Karabiner's to_delayed_action can't do it: the next Fn+H
 // cancels it too, which would end the selection before Fn+H checks it.
 const endSelectWord = setSelectWord(0)
-const endingSelectWord = (to: ToEvent[] | undefined, keepsSelectWord = false) =>
-  to && !keepsSelectWord ? [endSelectWord, ...to] : to
+// Caps Word ends the same way, except on the keys that can be part of a word: letters and
+// `-` (handled in its own rule, ahead of these), digits and Backspace (`keepsCapsWord`).
+const endCapsWord = setCapsWord(0)
+const endingWordModes = (
+  to: ToEvent[] | undefined,
+  {keepsSelectWord = false, keepsCapsWord = false}: Pick<Fields, 'keepsSelectWord' | 'keepsCapsWord'>
+) => {
+  if (!to || keepsSelectWord) return to
+  return keepsCapsWord ? [endSelectWord, ...to] : [endSelectWord, endCapsWord, ...to]
+}
 
 // Caps Lock needs a held press, then vk_none so the release registers.
 const capsLock: ToEvent[] = [{hold_down_milliseconds: 100, key_code: 'caps_lock'}, {key_code: 'vk_none'}]
@@ -87,13 +104,13 @@ const rule = (description: string, manipulators: Manipulator[]): Rule => ({
 /** A plain remap on Apple keyboards while the screen is unlocked. */
 const remap = (
   from: KeyCode,
-  {keepsSelectWord, ...fields}: Fields,
+  {keepsSelectWord, keepsCapsWord, ...fields}: Fields,
   modifiers: FromModifiers = {optional: ['any']}
 ): Manipulator => ({
   type: 'basic',
   from: {key_code: from, modifiers},
   ...fields,
-  to: endingSelectWord(fields.to, keepsSelectWord),
+  to: endingWordModes(fields.to, {keepsSelectWord, keepsCapsWord}),
   conditions: [unlocked, appleKeyboards]
 })
 
@@ -108,11 +125,12 @@ function fnLayer(
     mandatory = [],
     optional = ['any'],
     keepsSelectWord,
+    keepsCapsWord,
     conditions = [],
     ...fields
   }: FromModifiers & Fields & {conditions?: Condition[]} = {}
 ): Manipulator[] {
-  const events = endingSelectWord(to, keepsSelectWord)
+  const events = endingWordModes(to, {keepsSelectWord, keepsCapsWord})
   return [
     {
       type: 'basic',
@@ -151,6 +169,8 @@ const selectWord = (to: ToEvent[], fields: FromModifiers & Fields & {conditions?
 // the one-shot (which releases its modifier) can't end the hold. Karabiner only holds the last
 // event in `to` while the key is down, so the held modifier goes last; the one-shot is just armed.
 const oneShotModifiers: Modifier[] = ['right_control', 'right_option', 'right_command', 'right_shift']
+// Releases every armed one-shot. Sent before a key, that key goes out without them.
+const clearOneShots: ToEvent[] = oneShotModifiers.map((m) => ({sticky_modifier: {[m]: 'off'}}))
 
 /**
  * A one-shot modifier on the Fn layer, like the firmware's Stackable One-Shot. The one-shot arms
@@ -165,7 +185,7 @@ const oneShotMod = (from: KeyCode, held: Modifier, oneShot: Modifier) =>
     // (last, so it's held until key up).
     to_if_held_down: [{sticky_modifier: {[oneShot]: 'off'}}, key(held, 'fn')],
     to_delayed_action: {
-      to_if_invoked: oneShotModifiers.map((m) => ({sticky_modifier: {[m]: 'off'}}))
+      to_if_invoked: clearOneShots
     },
     parameters: {
       'basic.to_if_held_down_threshold_milliseconds': 300,
@@ -181,6 +201,12 @@ const serenityLayout: Record<KeyCode, KeyCode>[] = [
   {q: 'q', w: 'z', e: 'm', r: 'w', t: 'v', y: 'j', u: 'f', i: 'o', o: 'u', p: 'hyphen', open_bracket: 'equal_sign', close_bracket: 'slash', backslash: 'backslash'},
   {a: 'r', s: 'n', d: 't', f: 's', g: 'g', h: 'y', j: 'h', k: 'e', l: 'a', semicolon: 'i', quote: 'semicolon'},
   {z: 'x', x: 'l', c: 'd', v: 'c', b: 'b', n: 'k', m: 'p', comma: 'quote', period: 'comma', slash: 'period'}
+]
+
+// Keys no rule remaps that end Caps Word, as they can't be part of a word.
+const passThroughEndingCapsWord: KeyCode[] = [
+  ...['spacebar', 'return_or_enter', 'tab', 'delete_forward', 'grave_accent_and_tilde'],
+  ...['left_arrow', 'right_arrow', 'up_arrow', 'down_arrow', 'home', 'end', 'page_up', 'page_down']
 ]
 
 // --- Rules --------------------------------------------------------------------
@@ -202,7 +228,7 @@ const rules: Rule[] = [
     {
       type: 'basic',
       from: {key_code: 'caps_lock', modifiers: {optional: ['any']}},
-      to: [setFnLatch(0)],
+      to: [...clearOneShots, setFnLatch(0)],
       conditions: [fnLatched, unlocked, appleKeyboards]
     }
   ]),
@@ -226,14 +252,16 @@ const rules: Rule[] = [
     remap('right_shift', {
       to: [key('right_shift')],
       to_after_key_up: [key('right_shift')],
-      to_if_alone: [endSelectWord, key('return_or_enter')],
+      to_if_alone: [endSelectWord, endCapsWord, key('return_or_enter')],
       to_if_held_down: [key('right_shift')],
       keepsSelectWord: true
     })
   ]),
 
-  rule('Caps Lock ↔ Escape', [
-    remap('caps_lock', {to: [key('escape')]}),
+  // Escape clears armed one-shots first, as in the firmware, so a stray Fn+D then Escape
+  // sends a plain Escape, not ⌘Escape. Held modifiers still apply.
+  rule('Caps Lock ↔ Escape (Escape clears one-shot modifiers)', [
+    remap('caps_lock', {to: [...clearOneShots, key('escape')]}),
     remap('escape', {to: capsLock})
   ]),
 
@@ -280,12 +308,18 @@ const rules: Rule[] = [
 
   rule(
     'Fn+Q–P → 1–0',
-    fnLayerMap(['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'].map((from, i) => [from, key(String((i + 1) % 10))]))
+    fnLayerMap(
+      ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'].map((from, i) => [from, key(String((i + 1) % 10))]),
+      {keepsCapsWord: true}
+    )
   ),
 
   rule('Fn+N → Caps Lock, Fn+Delete → Delete', [
     ...fnLayer('n', capsLock),
-    ...fnLayer('delete_or_backspace', [key('delete_or_backspace')], {optional: ['control', 'command', 'option']}),
+    ...fnLayer('delete_or_backspace', [key('delete_or_backspace')], {
+      optional: ['control', 'command', 'option'],
+      keepsCapsWord: true
+    }),
     ...fnLayer('delete_or_backspace', [key('delete_forward')], {mandatory: ['shift'], optional: ['control', 'option']}),
     ...fnLayer('delete_or_backspace', [key('k', 'left_control')], {
       mandatory: ['shift', 'command'],
@@ -341,6 +375,43 @@ const rules: Rule[] = [
     ])
   ),
 
+  // Caps Word, as in the firmware: double-tap Left Shift and the next word comes out in
+  // capitals, `-` as `_`. Digits and Backspace keep it going; any other key ends it, and so
+  // does Left Shift. After the Fn layer, so a latched Fn layer still wins; before Layout,
+  // which would otherwise type the letters. The double tap follows Karabiner's own example:
+  // the second-tap check first, then the tap that arms it for 300 ms.
+  rule('Double-tap Left Shift → Caps Word', [
+    {
+      type: 'basic',
+      from: {key_code: 'left_shift', modifiers: {optional: ['any']}},
+      to: [endCapsWord, key('left_shift')],
+      conditions: [capsWording, unlocked, appleKeyboards]
+    },
+    {
+      type: 'basic',
+      from: {key_code: 'left_shift', modifiers: {optional: ['any']}},
+      to: [setShiftTapped(0), setCapsWord(1)],
+      conditions: [shiftTapped, unlocked, appleKeyboards]
+    },
+    {
+      type: 'basic',
+      from: {key_code: 'left_shift', modifiers: {optional: ['any']}},
+      to: [setShiftTapped(1), key('left_shift')],
+      to_delayed_action: {to_if_invoked: [setShiftTapped(0)], to_if_canceled: [setShiftTapped(0)]},
+      parameters: {'basic.to_delayed_action_delay_milliseconds': 300},
+      conditions: [unlocked, appleKeyboards]
+    },
+    ...serenityLayout
+      .flatMap((row) => Object.entries(row))
+      .filter(([, to]) => /^[a-z]$/.test(to) || to === 'hyphen')
+      .map(([from, to]) => ({
+        type: 'basic' as const,
+        from: {key_code: from, modifiers: {optional: ['shift', 'caps_lock']}},
+        to: [endSelectWord, key(to, 'left_shift')],
+        conditions: [capsWording, unlocked, appleKeyboards]
+      }))
+  ]),
+
   rule('Layout', [
     remap('delete_or_backspace', {to: [key('delete_forward')]}, {mandatory: ['shift'], optional: ['control', 'option']}),
     remap(
@@ -351,21 +422,31 @@ const rules: Rule[] = [
     ...serenityLayout.flatMap((row) => Object.entries(row).map(([from, to]) => remap(from, {to: [key(to)]})))
   ]),
 
-  // Keys no rule above remaps, passed through unchanged, so they end a
-  // selection too. Only active during a selection.
-  rule(
-    'Other keys end Select Word',
-    [
-      ...['spacebar', 'return_or_enter', 'tab', 'delete_or_backspace', 'delete_forward', 'grave_accent_and_tilde'],
-      ...['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
-      ...['left_arrow', 'right_arrow', 'up_arrow', 'down_arrow', 'home', 'end', 'page_up', 'page_down']
-    ].map((from) => ({
+  // Keys no rule above remaps, passed through unchanged, so they end a selection
+  // or Caps Word too. Only active while one is on. Digits and Backspace can be
+  // part of a word, so they only end a selection.
+  rule('Other keys end Select Word and Caps Word', [
+    ...passThroughEndingCapsWord.flatMap((from) => [
+      {
+        type: 'basic' as const,
+        from: {key_code: from, modifiers: {optional: ['any']}},
+        to: [endSelectWord, endCapsWord, key(from)],
+        conditions: [selecting, appleKeyboards]
+      },
+      {
+        type: 'basic' as const,
+        from: {key_code: from, modifiers: {optional: ['any']}},
+        to: [endCapsWord, key(from)],
+        conditions: [capsWording, appleKeyboards]
+      }
+    ]),
+    ...['delete_or_backspace', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].map((from) => ({
       type: 'basic' as const,
       from: {key_code: from, modifiers: {optional: ['any']}},
       to: [endSelectWord, key(from)],
       conditions: [selecting, appleKeyboards]
     }))
-  )
+  ])
 ]
 
 // --- Output -------------------------------------------------------------------

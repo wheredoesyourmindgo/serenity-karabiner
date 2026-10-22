@@ -51,8 +51,9 @@ All rules apply only to Apple keyboards: built in, over USB (vendor ID `1452`) o
 - **Fn+H:** select word, and again to extend to the next word (hold to keep extending); with Shift, select line, and again to extend down a line. Any other key, or 5 seconds without Fn+H, starts a new selection
 - **Fn+N:** Caps Lock
 - **Fn + number row:** what the top row does without Fn (brightness, Mission Control, Spotlight, Dictation, Do Not Disturb, media, volume). Fn + the top row still gives F1–F12, so everything moves down a row
-- **Caps Lock ↔ Escape** swap
+- **Caps Lock ↔ Escape** swap. Escape also clears any armed one-shot modifiers first, so a stray Fn+D then Escape is a plain Escape
 - **Right Shift:** tap for Enter, hold for Shift
+- **Left Shift:** double-tap for Caps Word, as in the firmware: the next word comes out in capitals, with `-` as `_`. Digits and Backspace keep it going; any other key, or Left Shift again, ends it
 
 ### Globe key
 
