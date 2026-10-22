@@ -155,10 +155,12 @@ const fnLayerMap = (pairs: [KeyCode, ToEvent][], fields: Fields = {}) =>
 /**
  * One Fn+H case of Select Word. `to` sets `select_word` first; the last event
  * is held, so holding Fn+H extends the selection with key repeat. The selection
- * also ends after 5 seconds without Fn+H, as in the firmware.
+ * also ends after 5 seconds without Fn+H, as in the firmware. Armed one-shots
+ * clear first: a one-shot Shift (Fn+F tap) still matches the Shift cases, but
+ * left armed it would add Shift to the ⌘← that starts a line selection.
  */
 const selectWord = (to: ToEvent[], fields: FromModifiers & Fields & {conditions?: Condition[]} = {}) =>
-  fnLayer('h', to, {
+  fnLayer('h', [...clearOneShots, ...to], {
     keepsSelectWord: true,
     to_delayed_action: {to_if_invoked: [endSelectWord]},
     parameters: {'basic.to_delayed_action_delay_milliseconds': 5000},

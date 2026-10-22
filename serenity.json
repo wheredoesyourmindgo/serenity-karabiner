@@ -4257,6 +4257,26 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
+            {
               "key_code": "down_arrow",
               "modifiers": [
                 "left_shift"
@@ -4329,6 +4349,26 @@
             }
           },
           "to": [
+            {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
             {
               "key_code": "down_arrow",
               "modifiers": [
@@ -4409,6 +4449,26 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
+            {
               "set_variable": {
                 "name": "select_word",
                 "value": 2
@@ -4479,6 +4539,26 @@
             }
           },
           "to": [
+            {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
             {
               "set_variable": {
                 "name": "select_word",
@@ -4557,6 +4637,26 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
+            {
               "set_variable": {
                 "name": "select_word",
                 "value": 2
@@ -4629,6 +4729,26 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
+            {
               "set_variable": {
                 "name": "select_word",
                 "value": 2
@@ -4706,6 +4826,26 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
+            {
               "set_variable": {
                 "name": "select_word",
                 "value": 1
@@ -4768,6 +4908,26 @@
             "key_code": "h"
           },
           "to": [
+            {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
             {
               "set_variable": {
                 "name": "select_word",
@@ -4845,6 +5005,26 @@
           },
           "to": [
             {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
+            {
               "set_variable": {
                 "name": "select_word",
                 "value": 1
@@ -4914,6 +5094,26 @@
             "key_code": "h"
           },
           "to": [
+            {
+              "sticky_modifier": {
+                "right_control": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_option": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_command": "off"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "right_shift": "off"
+              }
+            },
             {
               "set_variable": {
                 "name": "select_word",
